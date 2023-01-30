@@ -7,7 +7,7 @@ RPROMPT="%*"
 
 #Alias
 alias ll="ls -lAFh"
-
+alias ls="ls -lAFh"
 
 #Functions
 
