@@ -20,3 +20,6 @@ export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/b
 function mkcd () {
   mkdir -p "$@" && cd "$_";
 }
+
+#homebrew no analytics
+export HOMEBREW_NO_ANALYTICS=1
