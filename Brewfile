@@ -5,6 +5,8 @@ tap "homebrew/core"
 brew "bat"
 # Modern replacement for 'ls'
 brew "exa"
+# Mac App Store command-line interface
+brew "mas"
 # Git client focusing on productivity
 cask "gitkraken"
 # Text editor for code, markup and prose
