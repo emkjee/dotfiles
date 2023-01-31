@@ -1,12 +1,11 @@
-#taps
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
-
-#Brews (Packages)
+# Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# Modern replacement for 'ls'
 brew "exa"
-
-#Casks (Applications)
-cask "dropbox"
-cask "visual-studio-code"
+# Git client focusing on productivity
+cask "gitkraken"
+# Text editor for code, markup and prose
+cask "sublime-text"
