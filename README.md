@@ -11,3 +11,4 @@ Created directory for my .files [30th Jan 2023]
 - Finder Show Path Bar
 - Trackpad (Three Finger Drag and Tap to Click)
 - Git (config and SSH)
+- Turn off spotlight shortcut and use it for Alfred
