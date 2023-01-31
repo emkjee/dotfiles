@@ -1,3 +1,8 @@
+#Set Variables
+#Syntax Highlighting man pages using bat
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+
+
 #PROMPT
 PROMPT="
 %1~ %L %# "
