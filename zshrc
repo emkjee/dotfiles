@@ -13,7 +13,7 @@ RPROMPT="%*"
 
 #Alias
 #alias ll="ls -lAFh"
-# alias ls="ls -lAFh"
+#alias ls="ls -lAFh"
 alias exa="exa -laFh --git"
 alias ls="exa -laFh --git"
 alias ll="exa -laFh --git"
