@@ -13,7 +13,9 @@ RPROMPT="%*"
 
 #Alias
 alias ll="ls -lAFh"
-alias ls="ls -lAFh"
+# alias ls="ls -lAFh"
+alias exa="exa -laFh --git"
+alias ls="exa -laFh --git"
 
 
 # Add locations to $PATH Variable
