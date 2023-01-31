@@ -6,3 +6,5 @@ echo "\n<<< Starting Homebrew Setup >>>\n"
 
 
 brew install bat
+
+brew install --cask --no-quarantine visual-studio-code
