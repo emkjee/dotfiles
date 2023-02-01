@@ -18,6 +18,8 @@ alias ls="exa -laFh --git"
 alias ll="exa -laFh --git"
 alias exa="exa -laFh --git"
 alias refresh="source ~/.zshrc"
+alias bbd="brew bundle dump --force --describe"
+
 
 # Add locations to $PATH Variable
 # Add Visual Studio Code (code)
