@@ -6,6 +6,8 @@ tap "homebrew/core"
 brew "bat"
 # Modern replacement for 'ls'
 brew "exa"
+# Pager program similar to more
+brew "less"
 # Mac App Store command-line interface
 brew "mas"
 # Free (GNU) replacement for the Pico text editor
