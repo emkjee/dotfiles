@@ -12,6 +12,8 @@ brew "less"
 brew "mas"
 # Free (GNU) replacement for the Pico text editor
 brew "nano"
+# UNIX shell (command interpreter)
+brew "zsh"
 # Bash scripts that integrate bat with various command-line tools
 brew "eth-p/software/bat-extras"
 # Git client focusing on productivity
