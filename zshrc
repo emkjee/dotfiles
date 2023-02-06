@@ -14,11 +14,12 @@ RPROMPT="%*"
 
 
 #Alias
-alias ls="exa -laFh --git"
-alias ll="exa -laFh --git"
-alias exa="exa -laFh --git"
-alias refresh="source ~/.zshrc"
-alias bbd="brew bundle dump --force --describe"
+alias ls='exa -laFh --git'
+alias ll='exa -laFh --git'
+alias exa='exa -laFh --git'
+alias refresh='source ~/.zshrc'
+alias bbd='brew bundle dump --force --describe'
+alias trail='<<<${(F)path}'
 
 
 # Add locations to $PATH Variable
