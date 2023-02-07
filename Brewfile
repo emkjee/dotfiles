@@ -6,10 +6,14 @@ tap "homebrew/core"
 brew "bat"
 # Modern replacement for 'ls'
 brew "exa"
+# Command-line fuzzy finder written in Go
+brew "fzf"
 # Pager program similar to more
 brew "less"
 # Mac App Store command-line interface
 brew "mas"
+# Node version management
+brew "n"
 # Free (GNU) replacement for the Pico text editor
 brew "nano"
 # UNIX shell (command interpreter)
