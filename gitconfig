@@ -1,3 +1,8 @@
 [user]
 	name = emkjee
 	email = 123936268+emkjee@users.noreply.github.com
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
