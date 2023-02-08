@@ -1,7 +1,9 @@
 # dotfiles
-dotfiles.emkjee
+dotfiles.emkjee 
 
 Created directory for my .files [30th Jan 2023]
+
+Following -> https://www.udemy.com/course/dotfiles-from-start-to-finish-ish/
 
 ## TODO
 - Terminal Preferences
