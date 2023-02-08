@@ -27,9 +27,16 @@ alias trail='<<<${(F)path}'
 
 # Add locations to $PATH Variable
 # Add Visual Studio Code (code)
-export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
-export PATH="$N_PREFIX/bin:$PATH"
+# export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+# export PATH="$N_PREFIX/bin:$PATH"
 
+typeset -U path
+
+path=(
+  "$N_PREFIX/bin"
+  $path
+  "/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+)
 
 #Functions
 
