@@ -8,19 +8,20 @@ $username\
 [](fg:lavender bg:rosewater)\
 [](fg:rosewater bg:peach)\
 $directory\
-[](fg:peach bg:rosewater)\
-[](fg:rosewater bg:green)\
+[](fg:peach bg:#99d1db)\
+[](fg:#99d1db bg:teal)\
 $git_branch\
 $git_status\
-[](fg:green bg:lavender)\
+[](fg:teal bg:lavender)\
 [](fg:lavender bg:blue)\
 $golang\
+$lua\
 $python\
 $rust\
-[](fg:blue bg:lavender)\
-[](fg:lavender bg:surface1)\
+[](fg:blue bg:subtext0)\
+[](fg:subtext0 bg:surface0)\
 $time\
-[ ](fg:surface1)\
+[ ](fg:surface0)\
 $fill\
 $cmd_duration
 [│](bold text)
@@ -91,8 +92,8 @@ format = '[$symbol ]($style)'
 
 [username]
 show_always = true
-style_user = "bg:lavender fg:bold surface1"
-style_root = "bg:lavender fg:bold surface1"
+style_user = "fg:bold base bg:lavender"
+style_root = "fg:bold base bg:lavender"
 format = '[ $user ]($style)'
 
 [directory.substitutions]
@@ -108,38 +109,44 @@ read_only = " "
 truncation_length = 3
 truncation_symbol = "…/"
 truncate_to_repo = true
-style = "bg:peach fg:bold surface1"
+style = "fg:bold italic base bg:peach"
 format = "[ $path ]($style)"
 
 [git_branch]
 symbol = ""
-style = "bg:green fg:bold italic surface1"
+style = "fg:bold italic base bg:teal"
 format = '[ on $symbol $branch ]($style)'
 
 [git_status]
-style = "bg:green fg:bold italic surface1"
+style = "fg:bold italic base bg:teal"
 format = '([\[$all_status$ahead_behind\] ]($style))'
 
 [golang]
 symbol = ""
-style = "bg:blue fg:bold surface0"
+style = "fg:bold italic base bg:blue"
 format = '[ via $symbol ($version) ]($style)'
+
+[lua]
+symbol = ""
+style = "fg:bold italic base bg:blue"
+format = '[ via $symbol ($version) ]($style)'
+version_format = "v${raw}"
 
 [python]
 symbol = ""
-style = "bg:blue fg:bold surface0"
+style = "fg:bold italic base bg:blue"
 format = '[ via $symbol ($version) (\($virtualenv\) )]($style)'
 version_format = "v${raw}"
 
 [rust]
 symbol = ""
-style = "bg:blue fg:bold surface0"
+style = "fg:bold italic base bg:blue"
 format = '[ via $symbol ($version) ]($style)'
 
 [time]
 disabled = false
 time_format = "%R"
-style = "fg:text bg:surface1"
+style = "fg:text bg:surface0"
 format = '[  $time ]($style)'
 
 [fill]
@@ -149,4 +156,10 @@ symbol = ' '
 min_time = 500
 show_milliseconds = false
 disabled = false
-style = "bold italic maroon"
+style = "bold italic red"
+
+[shlvl]
+disabled = false
+symbol = "󰨊"
+style = "bold italic red"
+format = '[ $symbol ($shlvl) ]($style)'
