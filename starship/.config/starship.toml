@@ -13,7 +13,7 @@ $rust\
 $fill\
 $time\
 $cmd_duration
-[$shlvl$character](bold fg)"""
+[$shlvl$character](fg)"""
 
 palette = 'everforest'
 
@@ -75,13 +75,13 @@ Pop = ""
 
 [os]
 disabled = false
-style = "fg:bold fg"
+style = "fg:fg"
 format = '[$symbol ]($style)'
 
 [username]
 show_always = true
-style_user = "fg:bold blue"
-style_root = "fg:bold red"
+style_user = "fg:aqua"
+style_root = "fg:red"
 format = '[$user ]($style)'
 
 [directory.substitutions]
@@ -97,37 +97,37 @@ read_only = ""
 truncation_length = 3
 truncation_symbol = "…/"
 truncate_to_repo = true
-style = "fg:bold italic yellow"
+style = "fg:italic yellow"
 format = "[ $path ]($style)"
 
 [git_branch]
-style = "fg:bold italic red"
+style = "fg:italic red"
 format = '[on $symbol$branch]($style)'
 
 [git_status]
-style = "fg:bold italic red"
+style = "fg:italic red"
 format = '([\[$all_status$ahead_behind\] ]($style))'
 
 [golang]
 symbol = ""
-style = "fg:bold italic blue"
+style = "fg:italic blue"
 format = '[via $symbol ($version) ]($style)'
 
 [lua]
 symbol = ""
-style = "fg:bold italic blue"
+style = "fg:italic blue"
 format = '[via $symbol ($version) ]($style)'
 version_format = "v${raw}"
 
 [python]
 symbol = ""
-style = "fg:bold italic blue"
+style = "fg:italic blue"
 format = '[via $symbol ($version) (\($virtualenv\) )]($style)'
 version_format = "v${raw}"
 
 [rust]
 symbol = ""
-style = "fg:bold italic orange"
+style = "fg:italic orange"
 format = '[via $symbol ($version) ]($style)'
 
 [time]
@@ -143,10 +143,10 @@ symbol = ' '
 min_time = 500
 show_milliseconds = false
 disabled = false
-style = "bold italic red"
+style = "italic red"
 
 [shlvl]
 disabled = false
 symbol = "󰨊"
-style = "bold italic red"
+style = "italic red"
 format = '[$symbol-($shlvl) ]($style)'
