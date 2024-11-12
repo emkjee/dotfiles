@@ -1,4 +1,4 @@
-theme               = "catppuccin_mocha"
+theme               = "everforest_dark"
 
 
 ## insert mode - bindings ##########################################################################
@@ -84,7 +84,7 @@ esc                 = ["collapse_selection"]
 "U"                 = "switch_to_uppercase"
 "q"                 = ":buffer-close"
 "Q"                 = ":buffer-close!"
-"n"                 = ":new"
+"n"                 = ":vsplit-new"
 
 ## (new) normal-G mode - bindings ##################################################################
 ## to move around and extend selection, "G" == ";vg" ###############################################
