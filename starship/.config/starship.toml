@@ -1,66 +1,54 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 format = """
-[┌ ](bold text)\
 $os\
-[](lavender)\
 $username\
-[](fg:lavender bg:rosewater)\
-[](fg:rosewater bg:peach)\
 $directory\
-[](fg:peach bg:#99d1db)\
-[](fg:#99d1db bg:teal)\
 $git_branch\
 $git_status\
-[](fg:teal bg:lavender)\
-[](fg:lavender bg:blue)\
 $golang\
 $lua\
 $python\
 $rust\
-[](fg:blue bg:subtext0)\
-[](fg:subtext0 bg:surface0)\
-$time\
-[ ](fg:surface0)\
 $fill\
+$time\
 $cmd_duration
-[│](bold text)
-[└$shlvl─$character](bold text)"""
+[$shlvl$character](bold fg)"""
 
-palette = 'catppuccin_mocha'
+palette = 'everforest'
 
 [character]
-success_symbol = "[❯](text)"
+success_symbol = "[❯](fg)"
 error_symbol = "[❯](red)"
 vimcmd_symbol = "[❮](green)"
 
-[palettes.catppuccin_mocha]
-rosewater = "#f5e0dc"
-flamingo = "#f2cdcd"
-pink = "#f5c2e7"
-mauve = "#cba6f7"
-red = "#f38ba8"
-maroon = "#eba0ac"
-peach = "#fab387"
-yellow = "#f9e2af"
-green = "#a6e3a1"
-teal = "#94e2d5"
-sky = "#89dceb"
-sapphire = "#74c7ec"
-blue = "#89b4fa"
-lavender = "#b4befe"
-text = "#cdd6f4"
-subtext1 = "#bac2de"
-subtext0 = "#a6adc8"
-overlay2 = "#9399b2"
-overlay1 = "#7f849c"
-overlay0 = "#6c7086"
-surface2 = "#585b70"
-surface1 = "#45475a"
-surface0 = "#313244"
-base = "#1e1e2e"
-mantle = "#181825"
-crust = "#11111b"
+[palettes.everforest]
+bg_dim = "#232a2e"
+bg0 = "#2d353b"
+bg1 = "#343f44"
+bg2 = "#3d484d"
+bg3 = "#475258"
+bg4 = "#4f585e"
+bg5 = "#56635f"
+bg_visual = "#543a48"
+bg_red = "#514045"
+bg_green = "#425047"
+bg_blue = "#3a515d"
+bg_yellow = "#4d4c43"
+fg = "#d3c6aa"
+red = "#e67e80"
+orange = "#e69875"
+yellow = "#dbbc7f"
+green = "#a7c080"
+aqua = "#83c092"
+blue = "#7fbbb3"
+purple = "#d699b6"
+grey0 = "#7a8478"
+grey1 = "#859289"
+grey2 = "#9da9a0"
+statusline1 = "#a7c080"
+statusline2 = "#d3c6aa"
+statusline3 = "#e67e80"
 
 [os.symbols]
 Windows = "󰍲"
@@ -87,67 +75,66 @@ Pop = ""
 
 [os]
 disabled = false
-style = "fg:bold text"
+style = "fg:bold fg"
 format = '[$symbol ]($style)'
 
 [username]
 show_always = true
-style_user = "fg:bold base bg:lavender"
-style_root = "fg:bold base bg:lavender"
-format = '[ $user ]($style)'
+style_user = "fg:bold blue"
+style_root = "fg:bold red"
+format = '[$user ]($style)'
 
 [directory.substitutions]
-"Documents" = "󰈙 "
-"Downloads" = " "
-"Music" = " "
-"Pictures" = " "
-"Developer" = "󰲋 "
+"Documents" = "󰈙"
+"Downloads" = ""
+"Music" = ""
+"Pictures" = ""
+"Developer" = "󰲋"
 "dotfiles" = ""
 
 [directory]
-read_only = " "
+read_only = ""
 truncation_length = 3
 truncation_symbol = "…/"
 truncate_to_repo = true
-style = "fg:bold italic base bg:peach"
-format = "[ $path ]($style)"
+style = "fg:bold italic yellow"
+format = "[ $path ]($style)"
 
 [git_branch]
-symbol = ""
-style = "fg:bold italic base bg:teal"
-format = '[ on $symbol $branch ]($style)'
+style = "fg:bold italic red"
+format = '[on $symbol$branch]($style)'
 
 [git_status]
-style = "fg:bold italic base bg:teal"
+style = "fg:bold italic red"
 format = '([\[$all_status$ahead_behind\] ]($style))'
 
 [golang]
 symbol = ""
-style = "fg:bold italic base bg:blue"
-format = '[ via $symbol ($version) ]($style)'
+style = "fg:bold italic blue"
+format = '[via $symbol ($version) ]($style)'
 
 [lua]
 symbol = ""
-style = "fg:bold italic base bg:blue"
-format = '[ via $symbol ($version) ]($style)'
+style = "fg:bold italic blue"
+format = '[via $symbol ($version) ]($style)'
 version_format = "v${raw}"
 
 [python]
 symbol = ""
-style = "fg:bold italic base bg:blue"
-format = '[ via $symbol ($version) (\($virtualenv\) )]($style)'
+style = "fg:bold italic blue"
+format = '[via $symbol ($version) (\($virtualenv\) )]($style)'
 version_format = "v${raw}"
 
 [rust]
 symbol = ""
-style = "fg:bold italic base bg:blue"
-format = '[ via $symbol ($version) ]($style)'
+style = "fg:bold italic orange"
+format = '[via $symbol ($version) ]($style)'
 
 [time]
 disabled = false
 time_format = "%R"
-style = "fg:text bg:surface0"
-format = '[  $time ]($style)'
+style = "fg:grey2"
+format = '[ $time ]($style)'
 
 [fill]
 symbol = ' '
@@ -162,4 +149,4 @@ style = "bold italic red"
 disabled = false
 symbol = "󰨊"
 style = "bold italic red"
-format = '[ $symbol ($shlvl) ]($style)'
+format = '[$symbol-($shlvl) ]($style)'
