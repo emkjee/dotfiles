@@ -116,7 +116,7 @@ completion-timeout  = 5 ## instantly render completions
 popup-border        = "all" ## make popups look a bit tidy
 
 [editor.lsp]
-display-messages    = true
+# display-messages    = true ## annoying to see all those messages
 display-inlay-hints = true
 
 [editor.cursor-shape]
