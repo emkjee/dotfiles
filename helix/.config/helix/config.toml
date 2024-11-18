@@ -6,6 +6,8 @@ theme               = "everforest_dark"
 ## <C-[>            = to come to normal, makes lot of sense if you have replaced capslock with ctrl
 ## <C-f>            = macOS keybinding to move right in insert mode
 ## <C-b>            = macOS keybinding to move left in insert mode
+## <C-n>            = macOS keybinding to move down in insert mode
+## <C-p>            = macOS keybinding to move up in insert mode
 ## <disable>        = up / down / right / left / pageup / page down / home / end
 ####################################################################################################
 [keys.insert]
@@ -13,6 +15,8 @@ theme               = "everforest_dark"
 "C-["               = "normal_mode"
 "C-f"               = ["normal_mode", "move_char_right", "insert_mode"]
 "C-b"               = ["normal_mode", "move_char_left",  "insert_mode"]
+"C-n"               = ["normal_mode", "move_visual_line_down", "insert_mode"]
+"C-p"               = ["normal_mode", "move_visual_line_up", "insert_mode"]
 "up"                = "no_op"
 "down"              = "no_op"
 "left"              = "no_op"
