@@ -1,4 +1,4 @@
-theme               = "everforest_dark"
+theme               = "catppuccin_mocha"
 
 
 ## insert mode - bindings ##########################################################################
@@ -133,7 +133,7 @@ select              = "hidden" ## you don't actually need a cursor shape in sele
 '['                 = ']'
 '"'                 = '"'
 '`'                 = '`'
-'<'                 = '>'
+# '<'                 = '>' ## this was messing up conditional expressions
 
 [editor.indent-guides]
 render              = true
@@ -149,7 +149,7 @@ mode.insert         = "INSERT"
 mode.select         = "SELECT"
 left                = ["mode", "file-base-name", "file-modification-indicator", "read-only-indicator"]
 center              = ["spinner", "file-name", "total-line-numbers", "separator", "position", "separator", "position-percentage", "spacer", "separator", "version-control"]
-right               = ["diagnostics", "selections", "file-encoding", "file-line-ending", "file-type"]
+right               = ["file-encoding", "diagnostics", "separator", "selections", "separator", "file-line-ending", "separator", "file-type"]
 separator           = "▏"
 
 
