@@ -1,0 +1,23 @@
+{
+    "window.zoomLevel": 1,
+    "editor.minimap.enabled": false,
+    "zenMode.centerLayout": false,
+    "editor.cursorSmoothCaretAnimation": "on",
+    
+    // theme
+    "workbench.colorTheme": "Everforest Dark",
+    "everforest.highContrast": true,
+    "everforest.italicKeywords": true,
+    "everforest.darkSelection": "orange",
+    "everforest.darkCursor": "green",
+    "everforest.darkContrast": "medium",
+    "everforest.darkWorkbench": "material",
+
+    //font
+    "editor.fontFamily": "JetBrainsMono Nerd Font",
+    "editor.fontSize": 15,
+    "editor.fontWeight": "normal",
+    "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+    "terminal.integrated.fontSize": 15,
+    "terminal.integrated.fontWeight": "normal",
+}
