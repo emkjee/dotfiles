@@ -1,6 +1,7 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 format = """
+[╭─](fg:blue)\
 $os\
 $username\
 $directory\
@@ -13,14 +14,14 @@ $rust\
 $fill\
 $time\
 $cmd_duration
-[$shlvl$character](fg)"""
+[╰─$shlvl$character](fg:blue)"""
 
 palette = 'everforest'
 
 [character]
-success_symbol = "[❯](fg)"
+success_symbol = "[❯](blue)"
 error_symbol = "[❯](red)"
-vimcmd_symbol = "[❮](green)"
+vimcmd_symbol = "[❮](blue)"
 
 [palettes.everforest]
 bg_dim = "#232a2e"
@@ -75,7 +76,7 @@ Pop = ""
 
 [os]
 disabled = false
-style = "fg:fg"
+style = "fg:blue"
 format = '[$symbol ]($style)'
 
 [username]
@@ -110,24 +111,24 @@ format = '([\[$all_status$ahead_behind\] ]($style))'
 
 [golang]
 symbol = ""
-style = "fg:italic blue"
+style = "fg:blue"
 format = '[via $symbol ($version) ]($style)'
 
 [lua]
 symbol = ""
-style = "fg:italic blue"
+style = "fg:blue"
 format = '[via $symbol ($version) ]($style)'
 version_format = "v${raw}"
 
 [python]
 symbol = ""
-style = "fg:italic blue"
+style = "fg:blue"
 format = '[via $symbol ($version) (\($virtualenv\) )]($style)'
 version_format = "v${raw}"
 
 [rust]
 symbol = ""
-style = "fg:italic orange"
+style = "fg:orange"
 format = '[via $symbol ($version) ]($style)'
 
 [time]
@@ -149,4 +150,4 @@ style = "italic red"
 disabled = false
 symbol = "󰨊"
 style = "italic red"
-format = '[$symbol-($shlvl) ]($style)'
+format = '[ $symbol─($shlvl) ]($style)'
