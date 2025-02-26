@@ -1,4 +1,4 @@
-theme               = "catppuccin_mocha"
+theme               = "everforest_dark"
 
 
 ## insert mode - bindings ##########################################################################
@@ -31,8 +31,6 @@ theme               = "catppuccin_mocha"
 ## <tab> & <S-tab>  = use smart tab -> https://docs.helix-editor.com/editor.html#editorsmart-tab-section
 ## "~" / <A-`>      = to switch to uppercase / to switch case, reversed the default bahavior / kakoune's keybindings are more natural
 ## <C-g>            = Alternative to <A-.>, easier to do, all on home row, just left fingers
-## x                = more versatile (x), it can now extend in both direction depending on anchor position, do a <A-;> to flip anchor / cursor and then (x),
-##                    to start extending in other direction
 ####################################################################################################
 [keys.select]
 "tab"               = "extend_parent_node_end"
@@ -40,7 +38,6 @@ theme               = "catppuccin_mocha"
 "~"                 = "switch_to_uppercase"
 "A-`"               = "switch_case"
 "C-g"               = "repeat_last_motion"
-"x"                 = "extend_line"
 
 ## select-space mode - bindings ####################################################################
 ## u                = to switch to lower case, available in select mode as well.
@@ -55,10 +52,8 @@ theme               = "catppuccin_mocha"
 ## <tab> & <S-tab>  = use smart tab -> https://docs.helix-editor.com/editor.html#editorsmart-tab-section
 ## "C-c"            = <<space>-c> does the job well, freeing the keybinding for a better use in future
 ## "C-ret"          = insert new line and go into insert mode
-## x                = more versatile (x), it can now extend in both direction depending on anchor position, do a <A-;> to flip anchor / cursor and then (x),
-##                    to start extending in other direction
+## x                = will unselect the line(s) downwards if selected by previous (X) command, else will extend downwards
 ## X                = will unselect the line(s) upwards if selected by previous (x) command, else will extend upwards
-## <A-x>            = will unselect the line(s) downwards if selected by previous reversed (x) command, else will extend downwards
 ## "~" / <A-`>      = to switch to uppercase / to switch case, reversed the default bahavior / kakoune's keybindings are more natural
 ## <C-g>            = Alternative to <A-.>, easier to do, all on home row, just left fingers
 ## <esc>            = also used to collapse selection
@@ -68,9 +63,8 @@ theme               = "catppuccin_mocha"
 "S-tab"             = "move_parent_node_start"
 "C-c"               = "no_op"
 "C-ret"             = ["insert_newline", "insert_mode"]
-"x"                 = "extend_line"
-"X"                 = ["extend_line_up", "extend_to_line_bounds"]
-"A-x"               = ["extend_line_down", "extend_to_line_bounds"]
+"x"                 = "select_line_below"
+"X"                 = "select_line_above"
 "~"                 = "switch_to_uppercase"
 "A-`"               = "switch_case"
 "C-g"               = "repeat_last_motion"
@@ -81,7 +75,8 @@ esc                 = ["collapse_selection"]
 ## U                = to switch to upper case, available in select mode as well.
 ## q                = to close the current buffer
 ## q                = to force close the current buffer
-## n                = to open a new scratch buffer
+## n                = to open a new vertical scratch buffer
+## N                = to open a new horizontal scratch buffer
 ####################################################################################################
 [keys.normal.space]
 "u"                 = "switch_to_lowercase"
@@ -89,24 +84,19 @@ esc                 = ["collapse_selection"]
 "q"                 = ":buffer-close"
 "Q"                 = ":buffer-close!"
 "n"                 = ":vsplit-new"
+"N"                 = ":hsplit-new"
 
-## (new) normal-G mode - bindings ##################################################################
-## to move around and extend selection, "G" == ";vg" ###############################################
-## l                = to select till line end, regardless of anchor / cursor
-## h                = to select till line start, regardless of anchor / cursor
-## s                = to select till first non blank character, regardles of anchor / cursor
-## g                = to select till start of file, regardless of anchor / cursor
-## e                = to select till end of file, regardless of anchor / cursor
-## X                = to select till line bounds
-## https://github.com/helix-editor/helix/pull/1570
+## (new) G [extend mode] - bindings ################################################################
+## l                = to extend till line end
+## h                = to extend till line start
+## s                = to extend till first non blank character
+## x                = to extend till line bounds
 ####################################################################################################
 [keys.normal.G]
-"l"                 = ["collapse_selection", "extend_to_line_end"]
-"h"                 = ["collapse_selection", "extend_to_line_start"]
-"s"                 = ["collapse_selection", "extend_to_first_nonwhitespace"]
-"g"                 = ["collapse_selection", "select_mode", "goto_file_start", "exit_select_mode"]
-"e"                 = ["collapse_selection", "select_mode", "goto_file_end", "exit_select_mode"]
-"X"                 = "extend_to_line_bounds"
+"l"                 = "extend_to_line_end"
+"h"                 = "extend_to_line_start"
+"s"                 = "extend_to_first_nonwhitespace"
+"x"                 = "extend_to_line_bounds"
 
 
 [editor]
@@ -118,14 +108,16 @@ bufferline          = "always"
 color-modes         = true
 completion-timeout  = 5 ## instantly render completions
 popup-border        = "all" ## make popups look a bit tidy
+end-of-line-diagnostics = "hint"
+
+[editor.inline-diagnostics]
+cursor-line = "warning"
 
 [editor.lsp]
-# display-messages    = true ## annoying to see all those messages
 display-inlay-hints = true
 
 [editor.cursor-shape]
 insert              = "bar" ## visually distinguish between insert / normal mode
-select              = "hidden" ## you don't actually need a cursor shape in select / visual mode
 
 [editor.auto-pairs]
 '('                 = ')'
@@ -133,7 +125,6 @@ select              = "hidden" ## you don't actually need a cursor shape in sele
 '['                 = ']'
 '"'                 = '"'
 '`'                 = '`'
-# '<'                 = '>' ## this was messing up conditional expressions
 
 [editor.indent-guides]
 render              = true
@@ -152,11 +143,7 @@ center              = ["spinner", "file-name", "total-line-numbers", "separator"
 right               = ["file-encoding", "diagnostics", "separator", "selections", "separator", "file-line-ending", "separator", "file-type"]
 separator           = "▏"
 
-
-## <001>
-## to delete from cursor position till end of line use <t (cr)>
-## to delete from cursor position till begining of line use <T (cr)>
-## this has some inherent flaws however, it works for me in most of the scenarios
 ## ref:
+##   https://github.com/helix-editor/helix/pull/1570
 ##   https://www.reddit.com/r/HelixEditor/comments/11alw7q/delete_to_end_of_line/
 ##   https://github.com/helix-editor/helix/issues/1630
