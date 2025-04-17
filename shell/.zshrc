@@ -10,8 +10,8 @@ alias e="hx"
 alias ls="lsd"
 alias dir="lsd -lart"
 alias ll="lsd -lart"
-alias clean_dss="fd '.DS_Store' . --hidden --type f --exact-depth 1 -E .git -x rm -v"
-alias clean_dss_all="fd '.DS_Store' . --hidden --type f -E .git -x rm -v"
+alias rm="rm -i"
+alias cds="fd '.DS_Store' . --hidden --type f -E .git -x trash -v"
 
 
 ## setup plugins ---------------------------------
@@ -24,3 +24,8 @@ eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+
+## refs
+## for DS_Store - https://gist.github.com/lohenyumnam/2b127b9c3d1435dc12a33613c44e6308
+## for aliases - https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/common-aliases/common-aliases.plugin.zsh
