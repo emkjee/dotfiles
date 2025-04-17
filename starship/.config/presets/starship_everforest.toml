@@ -99,7 +99,7 @@ truncation_length = 3
 truncation_symbol = "…/"
 truncate_to_repo = true
 style = "fg:italic yellow"
-format = "[  $path ]($style)"
+format = "[ $path ]($style)"
 
 [git_branch]
 style = "fg:italic red"

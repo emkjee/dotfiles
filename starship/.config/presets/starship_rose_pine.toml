@@ -1,7 +1,7 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 format = """
-[┌ ](bold text)\
+[╭─](bold text)\
 $os\
 [](textdawn)\
 $username\
@@ -22,8 +22,7 @@ $golang\
 $lua\
 $python\
 $rust
-[│](bold text)
-[└$shlvl─$character](bold text)"""
+[╰─$shlvl─$character](bold text)"""
 
 palette = 'rose_pine'
 
