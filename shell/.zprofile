@@ -8,7 +8,7 @@ export EDITOR="$(brew --prefix)/bin/hx"
 SHELL_SESSIONS_DISABLE=1
 
 ## setup path
-export PATH="$PATH:$HOME/go/bin"
+export PATH="$PATH:$HOME/go/bin:$HOME/.local/bin"
 
 ## setup rust toolchain
 . "$HOME/.cargo/env"
