@@ -3,7 +3,8 @@ theme               = "everforest_dark"
 
 ## insert mode - bindings ##########################################################################
 ## <S-tab>          = use smart tab -> https://docs.helix-editor.com/editor.html#editorsmart-tab-section
-## <C-[>            = to come to normal, makes lot of sense if you have replaced capslock with ctrl
+## <C-i>            = fetch signature help when needed, auto-signuature-help is now disabled, this helps in avoiding the adamant signuare hint popup
+## <C-[>            = to come to normal, makes a lot of sense if you have replaced capslock with ctrl
 ## <C-f>            = macOS keybinding to move right in insert mode
 ## <C-b>            = macOS keybinding to move left in insert mode
 ## <C-n>            = macOS keybinding to move down in insert mode
@@ -12,6 +13,7 @@ theme               = "everforest_dark"
 ####################################################################################################
 [keys.insert]
 "S-tab"             = "move_parent_node_start"
+"C-i"               = "signature_help"
 "C-["               = "normal_mode"
 "C-f"               = ["normal_mode", "move_char_right", "insert_mode"]
 "C-b"               = ["normal_mode", "move_char_left",  "insert_mode"]
@@ -115,6 +117,7 @@ cursor-line = "warning"
 
 [editor.lsp]
 display-inlay-hints = true
+auto-signature-help = false
 
 [editor.cursor-shape]
 insert              = "bar" ## visually distinguish between insert / normal mode
@@ -147,3 +150,4 @@ separator           = "▏"
 ##   https://github.com/helix-editor/helix/pull/1570
 ##   https://www.reddit.com/r/HelixEditor/comments/11alw7q/delete_to_end_of_line/
 ##   https://github.com/helix-editor/helix/issues/1630
+##   https://www.reddit.com/r/HelixEditor/comments/yqfei5/toggle_signature_help/
