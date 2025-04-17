@@ -1,3 +1,9 @@
+## setup-functions -------------------------------
+## ensure_folder = check if a folder exists, if not create it
+# ------------------------------------------------
+source $HOME/repos/dotfiles/functions/ensure_folder.sh
+
+
 ## setup_aliases ---------------------------------
 ## trail = sanity resumed while displaying path
 ## e = to kickoff helix
