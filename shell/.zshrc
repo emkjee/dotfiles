@@ -1,7 +1,12 @@
+export DOTDIR="$HOME/repos/dotfiles"
+
+
 ## setup-functions -------------------------------
 ## ensure_folder = check if a folder exists, if not create it
+## ensure_exists = check if a command exists
 # ------------------------------------------------
-source $HOME/repos/dotfiles/functions/ensure_folder.sh
+source $DOTDIR/functions/ensure_folder.sh
+source $DOTDIR/functions/ensure_exists.sh
 
 
 ## setup_aliases ---------------------------------
