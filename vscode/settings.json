@@ -1,23 +1,57 @@
 {
-    "window.zoomLevel": 1,
-    "editor.minimap.enabled": false,
-    "zenMode.centerLayout": false,
-    "editor.cursorSmoothCaretAnimation": "on",
-    
-    // theme
-    "workbench.colorTheme": "Everforest Dark",
-    "everforest.highContrast": true,
-    "everforest.italicKeywords": true,
-    "everforest.darkSelection": "orange",
-    "everforest.darkCursor": "green",
-    "everforest.darkContrast": "medium",
-    "everforest.darkWorkbench": "material",
+  "window.zoomLevel": 1,
+  "zenMode.centerLayout": false,
+  "diffEditor.ignoreTrimWhitespace": false,
 
-    //font
-    "editor.fontFamily": "JetBrainsMono Nerd Font",
-    "editor.fontSize": 15,
-    "editor.fontWeight": "normal",
-    "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
-    "terminal.integrated.fontSize": 15,
-    "terminal.integrated.fontWeight": "normal",
+  // workbench
+  "workbench.colorTheme": "Rosé Pine Moon",
+  "workbench.iconTheme": "rose-pine-icons",
+
+  // theme
+  "everforest.highContrast": true,
+  "everforest.italicKeywords": true,
+  "everforest.darkSelection": "orange",
+  "everforest.darkCursor": "green",
+  "everforest.darkContrast": "medium",
+  "everforest.darkWorkbench": "high-contrast",
+
+  // editor
+  "editor.minimap.enabled": false,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.fontFamily": "JetBrainsMono Nerd Font Mono",
+  "editor.fontSize": 15,
+  "editor.fontWeight": "normal",
+
+  // terminal
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font Mono",
+  "terminal.integrated.fontSize": 15,
+  "terminal.integrated.fontWeight": "normal",
+
+  //json
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+
+  // python
+  "python.locator": "js",
+  "python.defaultInterpreterPath": "/usr/local/bin/python3.12",
+
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.formatOnSave": true
+  },
+
+  // javascript
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+
+  // json
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
