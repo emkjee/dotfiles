@@ -4,9 +4,11 @@ export DOTDIR="$HOME/repos/dotfiles"
 ## setup-functions -------------------------------
 ## ensure_folder = check if a folder exists, if not create it
 ## ensure_exists = check if a command exists
+## mkcd = to create a folder if doesn't exists and cd into it
 # ------------------------------------------------
 source $DOTDIR/functions/ensure_folder.sh
 source $DOTDIR/functions/ensure_exists.sh
+source $DOTDIR/functions/mkcd.sh
 
 
 ## setup_aliases ---------------------------------
@@ -40,3 +42,4 @@ source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 ## refs
 ## for DS_Store - https://gist.github.com/lohenyumnam/2b127b9c3d1435dc12a33613c44e6308
 ## for aliases - https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/common-aliases/common-aliases.plugin.zsh
+## for exists - https://stackoverflow.com/questions/592620/how-can-i-check-if-a-program-exists-from-a-bash-script/677212#677212
