@@ -1,5 +1,11 @@
-## initialize homebrew
+## the dotfile directory
+export DOTDIR="$HOME/repos/dotfiles"
+
+## initialize homebrew, setup for no analytics, no gatekeeper & no vscode extensions 
 eval "$(/opt/homebrew/bin/brew shellenv)"
+export HOMEBREW_NO_ANALYTICS=1
+export HOMEBREW_BUNDLE_DUMP_NO_VSCODE=1
+export HOMEBREW_CASK_OPTS="--no-quarantine"
 
 ## default editor => helix
 export EDITOR="$(brew --prefix)/bin/hx"
@@ -19,3 +25,6 @@ export PATH="$PATH:$HOME/go/bin:$HOME/.local/bin"
 
 ## setup rust toolchain
 . "$HOME/.cargo/env"
+
+#Syntax Highlighting man pages using bat
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
