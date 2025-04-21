@@ -90,7 +90,7 @@ esc                 = ["collapse_selection"]
 "n"                 = ":vsplit-new"
 "N"                 = ":hsplit-new"
 
-## (new) G [extend mode] - bindings --------------
+## normal-G-mode ---------------------------------
 ## l                = to extend till line end
 ## h                = to extend till line start
 ## s                = to extend till first non blank character
@@ -102,6 +102,15 @@ esc                 = ["collapse_selection"]
 "s"                 = "extend_to_first_nonwhitespace"
 "x"                 = "extend_to_line_bounds"
 
+## normal-<C-g>-mode [git commands]---------------
+## <s>              = git status
+## <l>              = git log
+## <a>              = git add <file>
+# ------------------------------------------------
+[keys.normal."C-g"]
+"s"                 = ["align_view_top", ":sh git status"]
+"l"                 = ["align_view_top", ":sh git log"]
+"a"                 = "@:sh git add <C-r>%<ret>"
 
 [editor]
 cursorline          = true
