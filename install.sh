@@ -1,6 +1,6 @@
-stow --target ~/ --dir . git
-stow --target ~/ --dir . helix
-stow --target ~/ --dir . starship
-stow --target ~/ --dir . bat
-stow --target ~/ --dir . shell
-stow --target ~/Library/Application\ Support/Code/User --dir . vscode
+stow --dotfiles --target ~/ --dir . git
+stow --dotfiles --target ~/ --dir . helix
+stow --dotfiles --target ~/ --dir . starship
+stow --dotfiles --target ~/ --dir . bat
+stow --dotfiles --target ~/ --dir . shell
+stow --dotfiles --target ~/Library/Application\ Support/Code/User --dir . vscode
