@@ -1,6 +1,3 @@
-export DOTDIR="$HOME/repos/dotfiles"
-
-
 ## setup-functions -------------------------------
 ## ensure_folder = check if a folder exists, if not create it
 ## ensure_exists = check if a command exists
@@ -20,9 +17,9 @@ source $DOTDIR/functions/mkcd.sh
 # ------------------------------------------------
 alias trail='<<<${(F)path}'
 alias e="hx"
-alias ls="lsd"
-alias dir="lsd -lart"
-alias ll="lsd -lart"
+alias ls="lsd --git"
+alias dir="lsd -lart --git"
+alias ll="lsd -lart --git"
 alias rm="rm -i"
 alias cds="fd '.DS_Store' . --hidden --type f -E .git -x trash -v"
 
