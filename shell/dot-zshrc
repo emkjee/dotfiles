@@ -21,7 +21,7 @@ alias ls="lsd --git"
 alias dir="lsd -lart --git"
 alias ll="lsd -lart --git"
 alias rm="rm -i"
-alias cds="fd '.DS_Store' . --hidden --type f -E .git -x trash -v"
+alias cds="fd '.DS_Store' . --hidden --no-ignore --type f -E .git -x trash -v"
 
 
 ## setup plugins ---------------------------------
