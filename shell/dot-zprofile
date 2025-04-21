@@ -4,6 +4,13 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 ## default editor => helix
 export EDITOR="$(brew --prefix)/bin/hx"
 
+## Set this environment variable to use a particular directory, other than the default, for Jupyter config files.
+export JUPYTER_CONFIG_DIR="$HOME/.config/jupyter"
+
+## If set, this environment variable should be the path to a directory, which IPython will use for user data. 
+## IPython will create it if it does not exist.
+export IPYTHONDIR="$HOME/.config/ipython"
+
 ## disable save/restore shell state
 SHELL_SESSIONS_DISABLE=1
 
