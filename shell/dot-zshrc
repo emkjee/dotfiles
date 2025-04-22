@@ -2,10 +2,12 @@
 ## ensure_folder = check if a folder exists, if not create it
 ## ensure_exists = check if a command exists
 ## mkcd = to create a folder if doesn't exists and cd into it
+## chg_prompt = to change starship prompt to one of the available presets
 # ------------------------------------------------
 source $DOTDIR/functions/ensure_folder.sh
 source $DOTDIR/functions/ensure_exists.sh
 source $DOTDIR/functions/mkcd.sh
+source $DOTDIR/functions/chg_prompt.zsh
 
 
 ## setup_aliases ---------------------------------
