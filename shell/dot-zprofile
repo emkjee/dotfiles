@@ -26,5 +26,11 @@ export PATH="$PATH:$HOME/go/bin:$HOME/.local/bin"
 ## setup rust toolchain
 . "$HOME/.cargo/env"
 
-#Syntax Highlighting man pages using bat
+## Syntax Highlighting man pages using bat
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+
+## set default null command to bat instead of cat
+export NULLCMD=bat
+
+## unique path elements
+typeset -U path

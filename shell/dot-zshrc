@@ -20,8 +20,8 @@ source $DOTDIR/functions/chg_prompt.zsh
 alias trail='<<<${(F)path}'
 alias e="hx"
 alias ls="lsd --git"
-alias dir="lsd -lart --git"
-alias ll="lsd -lart --git"
+alias dir="lsd -lArt --git"
+alias ll="lsd -lArt --git"
 alias rm="rm -i"
 alias cds="fd '.DS_Store' . --hidden --no-ignore --type f -E .git -x trash -v"
 
