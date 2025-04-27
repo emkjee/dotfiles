@@ -4,8 +4,8 @@
   "diffEditor.ignoreTrimWhitespace": false,
 
   // workbench
-  "workbench.colorTheme": "Rosé Pine Moon",
-  "workbench.iconTheme": "rose-pine-icons",
+  "workbench.colorTheme": "Everforest Dark",
+  "workbench.iconTheme": "vscode-icons",
 
   // theme
   "everforest.highContrast": true,
@@ -37,7 +37,7 @@
 
   // python
   "python.locator": "js",
-  "python.defaultInterpreterPath": "/usr/local/bin/python3.12",
+  "python.defaultInterpreterPath": "/usr/local/bin/python3.13",
 
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff",
