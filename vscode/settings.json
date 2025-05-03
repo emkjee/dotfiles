@@ -4,8 +4,10 @@
   "diffEditor.ignoreTrimWhitespace": false,
 
   // workbench
-  "workbench.colorTheme": "Everforest Dark",
+  "workbench.colorTheme": "Winter is Coming (Dark Blue)",
   "workbench.iconTheme": "vscode-icons",
+  "workbench.colorCustomizations": {},
+  "search.showLineNumbers": true,
 
   // theme
   "everforest.highContrast": true,
@@ -16,11 +18,25 @@
   "everforest.darkWorkbench": "high-contrast",
 
   // editor
+  "editor.autoIndent": "full",
   "editor.minimap.enabled": false,
-  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.wordWrap": "on",
+  "editor.suggestSelection": "first",
+  "editor.tabCompletion": "on",
+  "editor.multiCursorModifier": "alt",
+
+  //editor.font settings
   "editor.fontFamily": "JetBrainsMono Nerd Font Mono",
   "editor.fontSize": 15,
+  "editor.fontLigatures": false,
   "editor.fontWeight": "normal",
+  "editor.lineHeight": 25,
+  "editor.letterSpacing": 0.3,
+
+  //editor.cursor settings
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorStyle": "line",
 
   // terminal
   "terminal.integrated.cursorBlinking": true,
@@ -34,6 +50,11 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
   },
+  // json
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
 
   // python
   "python.locator": "js",
@@ -41,17 +62,14 @@
 
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff",
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "editor.tabSize": 4
   },
 
   // javascript
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true
-  },
-
-  // json
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2
   }
 }
