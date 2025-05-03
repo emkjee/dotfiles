@@ -146,7 +146,7 @@ character           = "▏"  ## Some characters that work well: "▏", "┆", "�
 skip-levels         = 1
 
 [editor.soft-wrap]
-enable              = true
+enable              = false
 
 [editor.statusline]
 mode.normal         = "NORMAL"

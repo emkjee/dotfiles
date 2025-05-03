@@ -20,7 +20,7 @@
   // editor
   "editor.autoIndent": "full",
   "editor.minimap.enabled": false,
-  "editor.wordWrap": "on",
+  "editor.wordWrap": "off",
   "editor.suggestSelection": "first",
   "editor.tabCompletion": "on",
   "editor.multiCursorModifier": "alt",
