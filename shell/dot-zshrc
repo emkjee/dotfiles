@@ -11,12 +11,18 @@ source $DOTDIR/functions/chg_prompt.zsh
 
 
 ## setup_aliases ---------------------------------
+## ".." = to go up by 1 level
+## "..." = to go up by 2 level
+## "...." = to go up by 3 level
 ## trail = sanity resumed while displaying path
 ## e = to kickoff helix
 ## ls / ll / dir = default to lsd
 ## rm -i = rm interactive
 ## cds = to clean all .DS_Store files in current directory / sub directories
 # ------------------------------------------------
+alias ..="cd ../"
+alias ...="cd ../../"
+alias ....="cd ../../../"
 alias trail='<<<${(F)path}'
 alias e="hx"
 alias ls="lsd --git"
@@ -24,6 +30,9 @@ alias dir="lsd -lArt --git"
 alias ll="lsd -lArt --git"
 alias rm="rm -i"
 alias cds="fd '.DS_Store' . --hidden --no-ignore --type f -E .git -x trash -v"
+alias brc="brew cleanup --prune=all"
+alias brl="brew list"
+alias bro="brew outdated"
 
 
 ## setup plugins ---------------------------------
