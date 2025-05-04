@@ -34,3 +34,6 @@ export NULLCMD=bat
 
 ## unique path elements
 typeset -U path
+
+## set default config directory
+export XDG_CONFIG_HOME="$HOME/.config"
