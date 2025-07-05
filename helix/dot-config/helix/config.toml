@@ -113,6 +113,8 @@ esc                 = ["collapse_selection"]
 "a"                 = "@:sh git add <C-r>%<ret>"
 
 [editor]
+scrolloff           = 2
+insert-final-newline = false
 cursorline          = true
 cursorcolumn        = true
 line-number         = "relative"
