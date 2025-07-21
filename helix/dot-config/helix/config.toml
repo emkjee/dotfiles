@@ -1,9 +1,9 @@
-theme               = "everforest_dark"
+theme               = "gruvbox-material"
 
 
 ## insert-mode -----------------------------------
 ## <S-tab>          = use smart tab -> https://docs.helix-editor.com/editor.html#editorsmart-tab-section
-## <C-i>            = fetch signature help when needed, auto-signuature-help is now disabled, this helps in avoiding the adamant signuare hint popup
+## <C-i>            = fetch signature help when needed, auto-signuature-help is now disabled, this helps in avoiding the adamant signature hint popup
 ## <C-[>            = to come to normal, makes a lot of sense if you have replaced capslock with ctrl
 ## <C-f>            = macOS keybinding to move right in insert mode
 ## <C-b>            = macOS keybinding to move left in insert mode
@@ -44,8 +44,8 @@ theme               = "everforest_dark"
 "C-c"               = "no_op"
 
 ## select-space-mode -----------------------------
-## <u>              = to switch to lower case, available in select mode as well.
-## <U>              = to switch to upper case, available in select mode as well.
+## <u>              = to switch to lower case, available in normal mode as well.
+## <U>              = to switch to upper case, available in normal mode as well.
 # ------------------------------------------------
 [keys.select.space]
 "u"                 = "switch_to_lowercase"
@@ -78,7 +78,7 @@ esc                 = ["collapse_selection"]
 ## u                = to switch to lower case, available in select mode as well.
 ## U                = to switch to upper case, available in select mode as well.
 ## q                = to close the current buffer
-## q                = to force close the current buffer
+## Q                = to force close the current buffer
 ## n                = to open a new vertical scratch buffer
 ## N                = to open a new horizontal scratch buffer
 # ------------------------------------------------
@@ -123,10 +123,10 @@ bufferline          = "always"
 color-modes         = true
 completion-timeout  = 5 ## instantly render completions
 popup-border        = "all" ## make popups look a bit tidy
-end-of-line-diagnostics = "hint"
+end-of-line-diagnostics = "disable"
 
 [editor.inline-diagnostics]
-cursor-line = "warning"
+cursor-line = "hint"
 
 [editor.lsp]
 display-inlay-hints = true
