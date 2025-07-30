@@ -3,14 +3,32 @@
   "zenMode.centerLayout": false,
   "diffEditor.ignoreTrimWhitespace": false,
 
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 200,
+
   // workbench
-  "workbench.colorTheme": "Winter is Coming (Dark Blue)",
-  "workbench.iconTheme": "vscode-icons",
+  "workbench.startupEditor": "none",
+  "workbench.colorTheme": "Gruvbox Material Dark",
+  "workbench.iconTheme": "material-icon-theme",
   "workbench.colorCustomizations": {},
   "search.showLineNumbers": true,
 
-  // theme
+  // icon theme - material-icon
+  "material-icon-theme.opacity": 0.75,
+
+  //theme - gruvboxMaterial
+  "gruvboxMaterial.highContrast": true,
+  "gruvboxMaterial.italicComments": true,
+  "gruvboxMaterial.italicKeywords": true,
+  "gruvboxMaterial.darkSelection": "yellow",
+  "gruvboxMaterial.darkCursor": "yellow",
+  "gruvboxMaterial.darkContrast": "medium",
+  "gruvboxMaterial.darkWorkbench": "flat",
+  "gruvboxMaterial.darkPalette": "original",
+
+  // theme - everforest
   "everforest.highContrast": true,
+  "everforest.italicComments": true,
   "everforest.italicKeywords": true,
   "everforest.darkSelection": "orange",
   "everforest.darkCursor": "green",
@@ -26,7 +44,7 @@
   "editor.multiCursorModifier": "alt",
 
   //editor.font settings
-  "editor.fontFamily": "JetBrainsMono Nerd Font Mono",
+  "editor.fontFamily": "JetBrainsMonoNL Nerd Font Mono",
   "editor.fontSize": 15,
   "editor.fontLigatures": false,
   "editor.fontWeight": "normal",
@@ -44,6 +62,8 @@
   "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font Mono",
   "terminal.integrated.fontSize": 15,
   "terminal.integrated.fontWeight": "normal",
+  "terminal.integrated.fontWeightBold": "400",
+  "terminal.integrated.inheritEnv": false,
 
   //json
   "[jsonc]": {
@@ -59,11 +79,16 @@
   // python
   "python.locator": "js",
   "python.defaultInterpreterPath": "/usr/local/bin/python3.13",
+  "python.analysis.inlayHints.variableTypes": true,
+  "python.analysis.inlayHints.functionReturnTypes": true,
 
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff",
     "editor.formatOnSave": true,
-    "editor.tabSize": 4
+    "editor.tabSize": 4,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    }
   },
 
   // javascript
