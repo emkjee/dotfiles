@@ -34,6 +34,12 @@
     "key": "shift+tab",
     "command": "selectPrevSuggestion",
     "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
-  }
+  },
   // >>> tab to move to next suggestion rather than accepting it, enter to accept
+
+  // >>> create terminal in editor area
+  {
+    "key": "alt+`",
+    "command": "workbench.action.createTerminalEditor"
+  }
 ]
