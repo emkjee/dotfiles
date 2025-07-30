@@ -11,6 +11,8 @@
   "workbench.colorTheme": "Gruvbox Material Dark",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.colorCustomizations": {},
+  "workbench.activityBar.location": "top",
+  "workbench.sideBar.location": "right",
   "search.showLineNumbers": true,
 
   // icon theme - material-icon
