@@ -1,0 +1,214 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+[](#3D484D)\
+$os\
+[](fg:#3D484D bg:statusline2)\
+[](fg:statusline2 bg:yellow)\
+$directory\
+[](fg:yellow bg:#b3c891)\
+[](fg:#b3c891 bg:green)\
+$git_branch\
+$git_status\
+[](fg:green bg:#8FBCBB)\
+[](fg:#8FBCBB bg:blue)\
+$c\
+$cpp\
+$rust\
+$golang\
+$nodejs\
+$php\
+$java\
+$kotlin\
+$haskell\
+$python\
+$lua\
+[](fg:blue bg:grey2)\
+$docker_context\
+$conda\
+$pixi\
+[](fg:grey2 bg:grey1)\
+$time\
+[ ](fg:grey1)\
+$cmd_duration\
+[$shlvl$character](bold statusline2)"""
+
+palette = 'everforest_dark'
+
+[character]
+disabled = false
+success_symbol = "[❯](bold fg:statusline2)"
+error_symbol = "[❯](bold fg:red)"
+vimcmd_symbol = "[❮](bold fg:blue)"
+vimcmd_replace_one_symbol = "[❮](bold fg:purple)"
+vimcmd_replace_symbol = "[❮](bold fg:purple)"
+vimcmd_visual_symbol = "[❮](bold fg:yellow)"
+
+[os]
+disabled = false
+style = "fg:bold statusline2 bg:#3D484D"
+format = '[$symbol ]($style)'
+
+[os.symbols]
+Windows = ""
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = "󰀵"
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+Arch = "󰣇"
+Artix = "󰣇"
+EndeavourOS = ""
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
+Pop = ""
+
+[username]
+show_always = true
+style_user = "fg:#1E2326 bg:red"
+style_root = "fg:#1E2326 bg:red"
+format = '[ $user ]($style)'
+
+[directory.substitutions]
+"Documents" = "󰈙"
+"Downloads" = ""
+"Music" = ""
+"Pictures" = ""
+"Developer" = "󰲋"
+"dotfiles" = ""
+
+[directory]
+read_only = " "
+truncation_length = 3
+truncation_symbol = "…/"
+truncate_to_repo = true
+style = "fg:bold italic #1E2326 bg:yellow"
+format = "[  $path ]($style)"
+
+[git_branch]
+symbol = ""
+style = "fg:bold bg_dim bg:green"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = "fg:bold bg_dim bg:green"
+format = '([\[$all_status$ahead_behind\] ]($style))'
+
+[nodejs]
+symbol = ""
+style = "fg:bg_dim bg:blue"
+format = '[ $symbol( $version) ]($style)'
+
+[c]
+symbol = " "
+style = "fg:bg_dim bg:blue"
+format = '[ $symbol( $version) ]($style)'
+
+[cpp]
+symbol = " "
+style = "fg:bg_dim bg:blue"
+format = '[ $symbol( $version) ]($style)'
+
+[lua]
+symbol = ""
+style = "fg:bg_dim bg:blue"
+format = '[ $symbol ($version) ]($style)'
+version_format = "${raw}"
+
+[golang]
+symbol = ""
+style = "fg:bg_dim bg:blue"
+format = '[ $symbol ($version) ]($style)'
+
+[php]
+symbol = ""
+style = "fg:bg_dim bg:blue"
+format = '[ $symbol( $version) ]($style)'
+
+[java]
+symbol = ""
+style = "fg:bg_dim bg:blue"
+format = '[ $symbol( $version) ]($style)'
+
+[kotlin]
+symbol = ""
+style = "fg:bg_dim bg:blue"
+format = '[ $symbol( $version) ]($style)'
+
+[haskell]
+symbol = ""
+style = "fg:bg_dim bg:blue"
+format = '[ $symbol( $version) ]($style)'
+
+[python]
+symbol = ""
+style = "fg:bg_dim bg:blue"
+format = '[ $symbol ($version)(\($virtualenv\)) ]($style)'
+version_format = "v${raw}"
+
+[rust]
+symbol = ""
+style = "fg:bg_dim bg:blue"
+format = '[ $symbol ($version) ]($style)'
+
+[docker_context]
+symbol = ""
+style = "bg:grey2"
+format = '[[ $symbol( $context) ](fg:bold bg_dim bg:grey2)]($style)'
+
+[conda]
+style = "bg:grey2"
+ignore_base = false
+format = '[[ $symbol( $environment) ](fg:bold bg_dim bg:grey2)]($style)'
+
+[pixi]
+style = "bg:grey2"
+format = '[[ $symbol( $version)( $environment) ](fg:bold bg_dim bg:grey2)]($style)'
+
+[time]
+disabled = false
+time_format = "%R"
+style = "fg:bg_dim bg:grey1"
+format = '[  $time ]($style)'
+
+[cmd_duration]
+disabled = false
+show_milliseconds = false
+show_notifications = true
+min_time_to_notify = 45000
+min_time = 5000
+style = "bold italic orange"
+format = "[took $duration ]($style)"
+
+[shlvl]
+disabled = false
+symbol = "󰨊"
+style = "bold italic red"
+format = '[$symbol-($shlvl) ]($style)'
+
+[line_break]
+disabled = true
+
+[fill]
+symbol = ' '
+
+[palettes.everforest_dark]
+yellow = "#DBBC7F"
+green = "#A7C080"
+red = "#E67E80"
+bg_dim = "#1E2326"
+grey1 = "#859289"
+grey2 = "#9DA9A0"
+statusline2 = "#D3C6AA"
+orange = "#E69875"
+blue = "#7FBBB3"
+purple = "#D699B6"
