@@ -1,0 +1,19 @@
+{
+  "dotfiles": [
+    {
+      "source": "ruff/",
+      "target": ".config/ruff/",
+      "type": "directory"
+    },
+    {
+      "source": "starship/starship.toml",
+      "target": ".config/starship.toml",
+      "type": "file"
+    },
+    {
+      "source": "bat/",
+      "target": ".config/bat/",
+      "type": "directory"
+    }
+  ]
+}
