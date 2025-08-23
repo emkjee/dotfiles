@@ -39,7 +39,7 @@
 
   // >>> create terminal in editor area
   {
-    "key": "alt+`",
+    "key": "alt+t",
     "command": "workbench.action.createTerminalEditor"
   }
 ]
