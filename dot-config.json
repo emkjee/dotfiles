@@ -1,6 +1,21 @@
 {
   "dotfiles": [
     {
+      "source": "bat/",
+      "target": ".config/bat/",
+      "type": "directory"
+    },
+    {
+      "source": "helix/",
+      "target": ".config/helix/",
+      "type": "directory"
+    },
+    {
+      "source": "kitty/",
+      "target": ".config/kitty/",
+      "type": "directory"
+    },
+    {
       "source": "ruff/",
       "target": ".config/ruff/",
       "type": "directory"
@@ -11,9 +26,19 @@
       "type": "file"
     },
     {
-      "source": "bat/",
-      "target": ".config/bat/",
-      "type": "directory"
+      "source": "zshrc",
+      "target": ".zshrc",
+      "type": "file"
+    },
+    {
+      "source": "zprofile",
+      "target": ".zprofile",
+      "type": "file"
+    },
+    {
+      "source": "hushlogin",
+      "target": ".hushlogin",
+      "type": "file"
     }
   ]
 }
