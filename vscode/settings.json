@@ -1,8 +1,11 @@
 {
   "window.zoomLevel": 1,
   "zenMode.centerLayout": false,
+
+  // diff
   "diffEditor.ignoreTrimWhitespace": false,
 
+  // files
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 200,
 
@@ -12,14 +15,10 @@
   "workbench.iconTheme": "material-icon-theme",
   "workbench.colorCustomizations": {},
   "workbench.activityBar.location": "top",
-  "workbench.sideBar.location": "right",
   "search.showLineNumbers": true,
   "accessibility.dimUnfocused.enabled": true,
 
-  // icon theme - material-icon
-  "material-icon-theme.opacity": 0.75,
-
-  //theme - gruvboxMaterial
+  // theme - gruvboxMaterial
   "gruvboxMaterial.highContrast": true,
   "gruvboxMaterial.italicComments": true,
   "gruvboxMaterial.italicKeywords": true,
@@ -46,7 +45,7 @@
   "editor.tabCompletion": "on",
   "editor.multiCursorModifier": "alt",
 
-  //editor.font settings
+  // editor.font settings
   "editor.fontFamily": "JetBrainsMonoNL Nerd Font Mono",
   "editor.fontSize": 15,
   "editor.fontLigatures": false,
@@ -54,7 +53,7 @@
   "editor.lineHeight": 25,
   "editor.letterSpacing": 0.3,
 
-  //editor.cursor settings
+  // editor.cursor settings
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.cursorBlinking": "smooth",
   "editor.cursorStyle": "line",
@@ -62,7 +61,7 @@
   // terminal
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.cursorStyle": "line",
-  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font Mono",
+  "terminal.integrated.fontFamily": "JetBrainsMonoNL Nerd Font Mono",
   "terminal.integrated.fontSize": 15,
   "terminal.integrated.fontWeight": "normal",
   "terminal.integrated.fontWeightBold": "400",
@@ -73,7 +72,6 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
   },
-  // json
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
