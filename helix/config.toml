@@ -1,9 +1,9 @@
-theme               = "gruvbox-material"
+theme               = "gruvbox-dark"
 
 
 ## insert-mode -----------------------------------
 ## <S-tab>          = use smart tab -> https://docs.helix-editor.com/editor.html#editorsmart-tab-section
-## <C-i>            = fetch signature help when needed, auto-signuature-help is now disabled, this helps in avoiding the adamant signature hint popup
+## <C-i>            = fetch signature help when needed, auto-signature-help is now disabled, this helps in avoiding the adamant signature hint popup
 ## <C-[>            = to come to normal, makes a lot of sense if you have replaced capslock with ctrl
 ## <C-f>            = macOS keybinding to move right in insert mode
 ## <C-b>            = macOS keybinding to move left in insert mode
@@ -114,7 +114,7 @@ esc                 = ["collapse_selection"]
 
 [editor]
 scrolloff           = 2
-insert-final-newline = false
+insert-final-newline = true
 cursorline          = true
 cursorcolumn        = true
 line-number         = "relative"
@@ -141,6 +141,7 @@ insert              = "bar" ## visually distinguish between insert / normal mode
 '['                 = ']'
 '"'                 = '"'
 '`'                 = '`'
+"'"                 = "'"
 
 [editor.indent-guides]
 render              = true
