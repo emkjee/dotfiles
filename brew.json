@@ -1,0 +1,29 @@
+{
+  "formulae": [
+    "bat",
+    "fd",
+    "fzf",
+    "git",
+    "helix",
+    "lazygit",
+    "lsd",
+    "pyright",
+    "ripgrep",
+    "starship",
+    "stow",
+    "typescript-language-server",
+    "uv",
+    "yazi",
+    "zoxide",
+    "zsh-autosuggestions",
+    "zsh-syntax-highlighting"
+  ],
+  "casks": [
+    "font-blex-mono-nerd-font",
+    "font-jetbrains-mono-nerd-font",
+    "google-chrome",
+    "google-drive",
+    "kitty",
+    "visual-studio-code"
+  ]
+}
