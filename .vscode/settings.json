@@ -1,6 +1,7 @@
 {
   "files.exclude": {
     "**/history.txt": true,
-    "LICENSE": true
+    "LICENSE": true,
+    "**/.mypy_cache/": true
   }
 }
