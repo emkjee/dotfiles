@@ -16,6 +16,8 @@ source $DOTDIR/functions/chg_prompt.zsh
 ## "...." = to go up by 3 level
 ## trail = sanity resumed while displaying path
 ## e = to kickoff helix
+## ek = to kickoff kitty
+## ez = to kickoff .zshrc
 ## ls / ll / dir = default to lsd
 ## rm -i = rm interactive
 ## cds = to clean all .DS_Store files in current directory / sub directories
@@ -25,6 +27,8 @@ alias ...="cd ../../"
 alias ....="cd ../../../"
 alias trail='<<<${(F)path}'
 alias e="hx"
+alias ek="hx ~/.config/kitty"
+alias ez="hx ~/.zshrc"
 alias ls="lsd --git"
 alias dir="lsd -lArt --git"
 alias ll="lsd -lArt --git"
