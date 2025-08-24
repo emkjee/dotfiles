@@ -1,9 +1,0 @@
-{
-  "dotfiles": [
-    {
-      "source": "bat/",
-      "target": ".config/bat/",
-      "type": "directory"
-    }
-  ]
-}
