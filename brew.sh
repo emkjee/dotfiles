@@ -1,5 +1,8 @@
 #!/usr/bin/env zsh
 
+
+## << please note this is deprecated in favor of brew.py, please use brew.py for better package installations >>
+
 echo "\n➡️ checking if brew installed, if not it will be installed"
 if command -v brew &>/dev/null; then
 echo "✅ brew exists, skipping installation..."
