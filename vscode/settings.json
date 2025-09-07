@@ -1,4 +1,5 @@
 {
+  // window
   "window.zoomLevel": 1,
   "zenMode.centerLayout": false,
 
@@ -11,12 +12,10 @@
 
   // workbench
   "workbench.startupEditor": "none",
-  "workbench.colorTheme": "Gruvbox Material Dark",
+  "workbench.colorTheme": "Gruvbox Dark Hard",
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.colorCustomizations": {},
   "workbench.activityBar.location": "top",
   "search.showLineNumbers": true,
-  "accessibility.dimUnfocused.enabled": true,
 
   // theme - gruvboxMaterial
   "gruvboxMaterial.highContrast": true,
@@ -47,6 +46,7 @@
 
   // editor.font settings
   "editor.fontFamily": "JetBrainsMonoNL Nerd Font Mono",
+  "editor.inlayHints.fontFamily": "BlexMono Nerd Font",
   "editor.fontSize": 15,
   "editor.fontLigatures": false,
   "editor.fontWeight": "normal",
@@ -67,7 +67,7 @@
   "terminal.integrated.fontWeightBold": "400",
   "terminal.integrated.inheritEnv": false,
 
-  //json
+  // json
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
@@ -93,9 +93,29 @@
   },
 
   // javascript
+  "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
+  "javascript.inlayHints.parameterTypes.enabled": true,
+  "javascript.inlayHints.variableTypes.enabled": true,
+  "javascript.inlayHints.parameterNames.enabled": "all",
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true,
     "editor.tabSize": 2
+  },
+
+  // typescript
+  "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+  "typescript.inlayHints.parameterTypes.enabled": true,
+  "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
+  "typescript.inlayHints.variableTypes.enabled": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2
+  },
+
+  // html
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }
