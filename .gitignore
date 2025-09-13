@@ -3,5 +3,6 @@
 **/backups/
 **/kitty/current-theme.conf
 **/kitty/kitty_default.conf
+**/kitty/kitty.conf.bak
 **/condarc
 **/yazi/
