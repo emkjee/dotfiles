@@ -2,4 +2,6 @@
 **/starship.toml
 **/backups/
 **/kitty/current-theme.conf
+**/kitty/kitty_default.conf
 **/condarc
+**/yazi/
