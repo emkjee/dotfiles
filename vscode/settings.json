@@ -1,12 +1,11 @@
 {
-  // window
+  // window & miscellaneous
   "window.zoomLevel": 1,
+  "window.menuBarVisibility": "toggle",
+  "breadcrumbs.enabled": false,
   "zenMode.centerLayout": false,
-
-  // diff
+  "search.showLineNumbers": true,
   "diffEditor.ignoreTrimWhitespace": false,
-
-  // files
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 200,
 
@@ -15,7 +14,7 @@
   "workbench.colorTheme": "Gruvbox Dark Hard",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.activityBar.location": "top",
-  "search.showLineNumbers": true,
+  "workbench.editor.editorActionsLocation": "titleBar",
 
   // theme - gruvboxMaterial
   "gruvboxMaterial.highContrast": true,
@@ -43,53 +42,56 @@
   "editor.suggestSelection": "first",
   "editor.tabCompletion": "on",
   "editor.multiCursorModifier": "alt",
+  "editor.matchBrackets": "always",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": true,
+  "editor.renderWhitespace": "trailing",
+  "editor.renderControlCharacters": true,
+  "editor.stickyScroll.enabled": true,
+  "editor.trimAutoWhitespace": true,
 
   // editor.font settings
   "editor.fontFamily": "JetBrainsMonoNL Nerd Font Mono",
   "editor.inlayHints.fontFamily": "BlexMono Nerd Font",
   "editor.fontSize": 15,
   "editor.fontLigatures": false,
-  "editor.fontWeight": "normal",
+  "editor.fontWeight": "301",
   "editor.lineHeight": 25,
   "editor.letterSpacing": 0.3,
 
   // editor.cursor settings
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.cursorBlinking": "smooth",
-  "editor.cursorStyle": "line",
+  "editor.cursorStyle": "line-thin",
 
   // terminal
+  "terminal.integrated.fontFamily": "JetBrainsMonoNL Nerd Font Mono",
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.cursorStyle": "line",
-  "terminal.integrated.fontFamily": "JetBrainsMonoNL Nerd Font Mono",
+  "terminal.integrated.cursorStyleInactive": "outline",
+  "terminal.integrated.lineHeight": 25,
   "terminal.integrated.fontSize": 15,
-  "terminal.integrated.fontWeight": "normal",
-  "terminal.integrated.fontWeightBold": "400",
+  "terminal.integrated.fontWeight": "301",
+  "terminal.integrated.fontWeightBold": "301",
   "terminal.integrated.inheritEnv": false,
+  "terminal.integrated.shellIntegration.enabled": false,
+
+  // html
+  "[html]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
 
   // json
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "prettier.tabWidth": 2
   },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true
-  },
-
-  // python
-  "python.locator": "js",
-  "python.defaultInterpreterPath": "/usr/local/bin/python3.13",
-  "python.analysis.inlayHints.variableTypes": true,
-  "python.analysis.inlayHints.functionReturnTypes": true,
-
-  "[python]": {
-    "editor.defaultFormatter": "charliermarsh.ruff",
     "editor.formatOnSave": true,
-    "editor.tabSize": 4,
-    "editor.codeActionsOnSave": {
-      "source.organizeImports": "explicit"
-    }
+    "prettier.tabWidth": 2
   },
 
   // javascript
@@ -100,7 +102,8 @@
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true,
-    "editor.tabSize": 2
+    "editor.tabSize": 2,
+    "prettier.tabWidth": 2
   },
 
   // typescript
@@ -114,8 +117,30 @@
     "editor.tabSize": 2
   },
 
-  // html
-  "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  // python
+  "python.locator": "js",
+  "python.defaultInterpreterPath": "/usr/local/bin/python3.13",
+  "python.analysis.typeCheckingMode": "strict",
+  "python.analysis.inlayHints.variableTypes": true,
+  "python.analysis.inlayHints.functionReturnTypes": true,
+  "python.analysis.autoFormatStrings": true,
+
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 4,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit",
+      "source.unusedImports": "never"
+    }
+  },
+
+  "notebook.formatOnSave.enabled": true,
+  "notebook.codeActionsOnSave": {
+    "source.organizeImports": "explicit",
+    "source.unusedImports": "never"
+  },
+
+  // rust
+  "rust-analyzer.check.command": "clippy"
 }
