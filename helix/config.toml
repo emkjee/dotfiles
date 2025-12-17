@@ -90,18 +90,6 @@ esc                 = ["collapse_selection"]
 "n"                 = ":vsplit-new"
 "N"                 = ":hsplit-new"
 
-## normal-G-mode ---------------------------------
-## l                = to extend till line end
-## h                = to extend till line start
-## s                = to extend till first non blank character
-## x                = to extend till line bounds
-# ------------------------------------------------
-[keys.normal.G]
-"l"                 = "extend_to_line_end"
-"h"                 = "extend_to_line_start"
-"s"                 = "extend_to_first_nonwhitespace"
-"x"                 = "extend_to_line_bounds"
-
 ## normal-<C-g>-mode [git commands]---------------
 ## <s>              = git status
 ## <l>              = git log
