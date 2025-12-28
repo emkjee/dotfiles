@@ -21,6 +21,9 @@ source $DOTDIR/functions/chg_prompt.zsh
 ## ls / ll / dir = default to lsd
 ## rm -i = rm interactive
 ## cds = to clean all .DS_Store files in current directory / sub directories
+## fempty = to find all empty subdirectories within the current directory
+## dempty = to find and delete all empty subdirectories within the current directory
+## brlink = to find broken links
 # ------------------------------------------------
 alias ..="cd ../"
 alias ...="cd ../../"
@@ -37,6 +40,9 @@ alias cds="fd '.DS_Store' . --hidden --no-ignore --type f -E .git -x trash -v"
 alias brc="brew cleanup --prune=all"
 alias brl="brew list"
 alias bro="brew outdated"
+alias fempty="fd . -t d -t e"
+alias dempty="fd . -t d -t e --exec trash -v {}"
+alias brlink="fd -t l -L"
 
 
 ## setup plugins ---------------------------------
