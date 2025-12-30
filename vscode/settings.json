@@ -69,7 +69,6 @@
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.cursorStyle": "line",
   "terminal.integrated.cursorStyleInactive": "outline",
-  "terminal.integrated.lineHeight": 1.1,
   "terminal.integrated.fontSize": 15,
   "terminal.integrated.fontWeight": "301",
   "terminal.integrated.fontWeightBold": "301",
