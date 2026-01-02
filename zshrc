@@ -24,6 +24,7 @@ source $DOTDIR/functions/chg_prompt.zsh
 ## fempty = to find all empty subdirectories within the current directory
 ## dempty = to find and delete all empty subdirectories within the current directory
 ## brlink = to find broken links
+## crq = cargo run quiet
 # ------------------------------------------------
 alias ..="cd ../"
 alias ...="cd ../../"
@@ -43,6 +44,7 @@ alias bro="brew outdated"
 alias fempty="fd . -t d -t e"
 alias dempty="fd . -t d -t e --exec trash -v {}"
 alias brlink="fd -t l -L"
+alias crq="cargo run --quiet"
 
 
 ## setup plugins ---------------------------------
