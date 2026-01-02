@@ -11,7 +11,7 @@
 
   // workbench
   "workbench.startupEditor": "none",
-  "workbench.colorTheme": "Gruvbox Dark Hard",
+  "workbench.colorTheme": "Tokyo Night Gogh",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.activityBar.location": "top",
   "workbench.editor.editorActionsLocation": "titleBar",
@@ -118,8 +118,9 @@
 
   // python
   "python.locator": "js",
-  "python.defaultInterpreterPath": "/usr/local/bin/python3.13",
-  "python.analysis.typeCheckingMode": "strict",
+  "python.defaultInterpreterPath": "/opt/homebrew/bin/python3",
+  "python.analysis.typeCheckingMode": "standard",
+  "python.analysis.typeEvaluation.strictListInference": true,
   "python.analysis.inlayHints.variableTypes": true,
   "python.analysis.inlayHints.functionReturnTypes": true,
   "python.analysis.autoFormatStrings": true,
