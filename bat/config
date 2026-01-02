@@ -1,4 +1,4 @@
---theme="gruvbox-dark"
+--theme="base16-256"
 --italic-text=always
 --map-syntax "*.ino:C++"
 --map-syntax ".ignore:Git Ignore"
