@@ -1,0 +1,146 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+[╭─](fg:blue)\
+$os\
+$directory\
+$git_branch\
+$git_status\
+$golang\
+$lua\
+$python\
+$rust\
+$fill\
+$time\
+$cmd_duration
+[╰─$shlvl$character](fg:blue)"""
+
+palette = 'tokyo_night'
+
+[character]
+disabled = false
+success_symbol = "[❯](blue)"
+error_symbol = "[❯](red)"
+vimcmd_symbol = "[❮](magenta)"
+
+[os]
+disabled = false
+style = "fg:blue"
+format = '[$symbol ]($style)'
+
+[os.symbols]
+Windows = "󰍲"
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = "󰀵"
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+Arch = "󰣇"
+Artix = "󰣇"
+EndeavourOS = ""
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
+Pop = ""
+
+[username]
+show_always = true
+style_user = "fg:cyan"
+style_root = "fg:red"
+format = '[$user ]($style)'
+
+[directory.substitutions]
+"Documents" = "󰈙"
+"Downloads" = ""
+"Music" = "󰝚"
+"Pictures" = ""
+"Developer" = "󰲋"
+"dotfiles" = ""
+
+[directory]
+read_only = " "
+truncation_length = 3
+truncation_symbol = "…/"
+truncate_to_repo = true
+style = "fg:fg"
+format = "[ $path ]($style)"
+
+[git_branch]
+symbol = " "
+style = "fg:grey_blue"
+format = '[on $symbol$branch ]($style)'
+
+[git_status]
+style = "fg:red"
+format = '([\[$all_status$ahead_behind\] ]($style))'
+
+[golang]
+symbol = " "
+style = "fg:cyan"
+format = '[$symbol ($version) ]($style)'
+
+[lua]
+symbol = " "
+style = "fg:blue"
+format = '[$symbol ($version) ]($style)'
+version_format = "${raw}"
+
+[python]
+symbol = ""
+style = "fg:blue"
+format = '[$symbol ($version)(\($virtualenv\)) ]($style)'
+version_format = "v${raw}"
+
+[rust]
+symbol = ""
+style = "fg:orange"
+format = '[$symbol ($version) ]($style)'
+
+[time]
+disabled = false
+time_format = "%R"
+style = "fg:comment"
+format = '[  $time ]($style)'
+
+[cmd_duration]
+disabled = false
+show_milliseconds = false
+show_notifications = true
+min_time_to_notify = 45000
+min_time = 5000
+style = "bold italic red"
+format = "[took $duration ]($style)"
+
+[shlvl]
+disabled = false
+symbol = "󰨊"
+style = "bold italic red"
+format = '[ $symbol─($shlvl) ]($style)'
+
+[line_break]
+disabled = true
+
+[fill]
+symbol = ' '
+
+[palettes.tokyo_night]
+bg = "#1a1b26"           # editor.background
+fg = "#c0caf5"           # foreground
+red = "#f7768e"          # Red/Tags/Variables
+orange = "#ff9e64"       # (derived/accent)
+yellow = "#e0af68"       # Constants/Warning
+light_yellow = "#fffcb0" # Directory / Branch
+green = "#9ece6a"        # Strings
+cyan = "#7dcfff"         # Types/Operators
+blue = "#7aa2f7"         # Functions/Attributes
+magenta = "#bb9af7"      # Keywords/Control
+comment = "#565f89"      # Comments/Grey
+grey_blue = "#8590c5"    # Directory / Branch
