@@ -1,0 +1,130 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+[╭─](fg:#717C7C)\
+$os\
+$directory\
+$git_branch\
+$git_status\
+$golang\
+$lua\
+$python\
+$rust\
+$fill\
+$time\
+$cmd_duration
+[╰─$shlvl$character](fg:#717C7C)""" # katanaGray
+
+[character]
+disabled = false
+success_symbol = "[❯](#717C7C)" # katanaGray
+error_symbol = "[❯](#E46876)" # waveRed
+vimcmd_symbol = "[❮](#957FB8)" # oniViolet
+
+[os]
+disabled = false
+style = "fg:#717C7C" #katanaGray
+format = '[$symbol ]($style)'
+
+[os.symbols]
+Windows = "󰍲"
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = "󰀵"
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+Arch = "󰣇"
+Artix = "󰣇"
+EndeavourOS = ""
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
+Pop = ""
+
+[username]
+show_always = true
+style_user = "fg:#6A9589" #waveAqua1
+style_root = "fg:#C34043" #AutumnRed
+format = '[$user ]($style)'
+
+[directory.substitutions]
+"Documents" = "󰈙"
+"Downloads" = ""
+"Music" = "󰝚"
+"Pictures" = ""
+"Developer" = "󰲋"
+"dotfiles" = ""
+
+[directory]
+read_only = " "
+truncation_length = 3
+truncation_symbol = "…/"
+truncate_to_repo = true
+style = "fg:#7FB4CA" #springBlue
+format = "[ $path ]($style)"
+
+[git_branch]
+symbol = " "
+style = "fg:#76946A" #autumnGreen
+format = '[on $symbol$branch ]($style)'
+
+[git_status]
+style = "fg:#D27E99" #sakuraPink
+format = '([\[$all_status$ahead_behind\] ]($style))'
+
+[golang]
+symbol = " "
+style = "fg:#7FB4CA" #sprintBlue
+format = '[$symbol ($version) ]($style)'
+
+[lua]
+symbol = " "
+style = "fg:#7E9CD8" #dragonBlue
+format = '[$symbol ($version) ]($style)'
+version_format = "${raw}"
+
+[python]
+symbol = ""
+style = "fg:#658594" #dragonBlue
+format = '[$symbol ($version)(\($virtualenv\)) ]($style)'
+version_format = "v${raw}"
+
+[rust]
+symbol = ""
+style = "fg:#FFA066" #surimiOrange
+format = '[$symbol ($version) ]($style)'
+
+[time]
+disabled = false
+time_format = "%R"
+style = "fg:#727169" #fujiGray
+format = '[  $time ]($style)'
+
+[cmd_duration]
+disabled = false
+show_milliseconds = false
+show_notifications = true
+min_time_to_notify = 45000
+min_time = 5000
+style = "bold italic #E46876" #waveRed
+format = "[took $duration ]($style)"
+
+[shlvl]
+disabled = false
+symbol = "󰨊"
+style = "bold italic #E46876" #waveRed
+format = '[ $symbol─($shlvl) ]($style)'
+
+[line_break]
+disabled = true
+
+[fill]
+symbol = ' '
