@@ -77,11 +77,11 @@ hint = { fg = "hint" }
 "ui.selection.primary" = { bg = "bg-selection" }
 "ui.statusline" = { bg = "bg-focus", fg = "fg-dark" }
 "ui.statusline.inactive" = { bg = "bg-menu", fg = "fg-gutter" }
-"ui.statusline.normal" = { bg = "blue", fg = "bg", modifiers = ["bold"] }
-"ui.statusline.insert" = { bg = "light-green", fg = "bg", modifiers = ["bold"] }
-"ui.statusline.select" = { bg = "magenta", fg = "bg", modifiers = ["bold"] }
-"ui.bufferline" = { bg = "bg", fg = "fg-dark", modifiers = ["bold"] }
-"ui.bufferline.active" = { bg = "blue", fg = "bg", modifiers = ["bold"] }
+"ui.statusline.normal" = { bg = "blue", fg = "bg", modifiers = ["light"] }
+"ui.statusline.insert" = { bg = "light-green", fg = "bg", modifiers = ["light"] }
+"ui.statusline.select" = { bg = "magenta", fg = "bg", modifiers = ["light"] }
+"ui.bufferline" = { bg = "bg", fg = "fg-dark", modifiers = ["light"] }
+"ui.bufferline.active" = { bg = "blue", fg = "bg", modifiers = ["light"] }
 "ui.bufferline.background" = { bg = "bg-focus" }
 "ui.text" = { fg = "fg" }
 "ui.text.focus" = { bg = "bg-focus" }
