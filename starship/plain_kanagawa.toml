@@ -1,7 +1,7 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 format = """
-[╭─](fg:#717C7C)\
+[╭─](fg:lotus_violet_3)\
 $os\
 $directory\
 $git_branch\
@@ -13,17 +13,19 @@ $rust\
 $fill\
 $time\
 $cmd_duration
-[╰─$shlvl$character](fg:#717C7C)""" # katanaGray
+[╰─$shlvl$character](fg:lotus_violet_3)"""
+
+palette = 'kanagawa'
 
 [character]
 disabled = false
-success_symbol = "[❯](#717C7C)" # katanaGray
-error_symbol = "[❯](#E46876)" # waveRed
-vimcmd_symbol = "[❮](#957FB8)" # oniViolet
+success_symbol = "[❯](lotus_violet_3)"
+error_symbol = "[❯](wave_red)"
+vimcmd_symbol = "[❮](oni_violet)"
 
 [os]
 disabled = false
-style = "fg:#717C7C" #katanaGray
+style = "fg:lotus_violet_3"
 format = '[$symbol ]($style)'
 
 [os.symbols]
@@ -51,8 +53,8 @@ Pop = ""
 
 [username]
 show_always = true
-style_user = "fg:#6A9589" #waveAqua1
-style_root = "fg:#C34043" #AutumnRed
+style_user = "fg:lotus_violet_1"
+style_root = "fg:lotus_red"
 format = '[$user ]($style)'
 
 [directory.substitutions]
@@ -68,44 +70,44 @@ read_only = " "
 truncation_length = 3
 truncation_symbol = "…/"
 truncate_to_repo = true
-style = "fg:#7FB4CA" #springBlue
+style = "fg:lotus_green_3"
 format = "[ $path ]($style)"
 
 [git_branch]
-symbol = " "
-style = "fg:#76946A" #autumnGreen
+symbol = " "
+style = "fg:lotus_yellow_4"
 format = '[on $symbol$branch ]($style)'
 
 [git_status]
-style = "fg:#D27E99" #sakuraPink
+style = "fg:sakura_pink"
 format = '([\[$all_status$ahead_behind\] ]($style))'
 
 [golang]
 symbol = " "
-style = "fg:#7FB4CA" #sprintBlue
+style = "fg:lotus_aqua"
 format = '[$symbol ($version) ]($style)'
 
 [lua]
 symbol = " "
-style = "fg:#7E9CD8" #dragonBlue
+style = "fg:crystal_blue"
 format = '[$symbol ($version) ]($style)'
 version_format = "${raw}"
 
 [python]
 symbol = ""
-style = "fg:#658594" #dragonBlue
+style = "fg:crystal_blue"
 format = '[$symbol ($version)(\($virtualenv\)) ]($style)'
 version_format = "v${raw}"
 
 [rust]
 symbol = ""
-style = "fg:#FFA066" #surimiOrange
+style = "fg:lotus_orange"
 format = '[$symbol ($version) ]($style)'
 
 [time]
 disabled = false
 time_format = "%R"
-style = "fg:#727169" #fujiGray
+style = "fg:lotus_gray_3"
 format = '[  $time ]($style)'
 
 [cmd_duration]
@@ -114,13 +116,13 @@ show_milliseconds = false
 show_notifications = true
 min_time_to_notify = 45000
 min_time = 5000
-style = "bold italic #E46876" #waveRed
+style = "bold italic wave_red"
 format = "[took $duration ]($style)"
 
 [shlvl]
 disabled = false
 symbol = "󰨊"
-style = "bold italic #E46876" #waveRed
+style = "bold italic wave_red"
 format = '[ $symbol─($shlvl) ]($style)'
 
 [line_break]
@@ -128,3 +130,17 @@ disabled = true
 
 [fill]
 symbol = ' '
+
+[palettes.kanagawa]
+wave_red = "#E46876"
+crystal_blue = "#7E9CD8"
+sakura_pink = "#D27E99"
+lotus_gray_3 = "#8a8980"
+lotus_orange = "#cc6d00"
+lotus_aqua = "597b75"
+lotus_yellow_4 = "#f9d791"
+lotus_green_3 = "#b7d0ae"
+lotus_violet_1 = "#a09cac"
+lotus_violet_3 = "#c9cbd1"
+lotus_red = "#c84053"
+oni_violet = "#957FB8"
