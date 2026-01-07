@@ -74,8 +74,8 @@ style = "fg:fg"
 format = "[ $path ]($style)"
 
 [git_branch]
-symbol = " "
-style = "fg:grey_blue"
+symbol = " "
+style = "fg:magenta"
 format = '[on $symbol$branch ]($style)'
 
 [git_status]
