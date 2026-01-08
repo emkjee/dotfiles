@@ -11,7 +11,7 @@
 
   // workbench
   "workbench.startupEditor": "none",
-  "workbench.colorTheme": "Tokyo Night Gogh",
+  "workbench.colorTheme": "Gruvbox Material Dark",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.activityBar.location": "top",
   "workbench.editor.editorActionsLocation": "titleBar",
