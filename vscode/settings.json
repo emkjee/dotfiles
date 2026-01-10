@@ -51,7 +51,7 @@
   "editor.trimAutoWhitespace": true,
 
   // editor.font settings
-  "editor.fontFamily": "JetBrainsMonoNL Nerd Font Mono",
+  "editor.fontFamily": "JetBrainsMonoNL Nerd Font",
   "editor.inlayHints.fontFamily": "BlexMono Nerd Font",
   "editor.fontSize": 15,
   "editor.fontLigatures": false,
@@ -65,7 +65,7 @@
   "editor.cursorStyle": "line-thin",
 
   // terminal
-  "terminal.integrated.fontFamily": "JetBrainsMonoNL Nerd Font Mono",
+  "terminal.integrated.fontFamily": "JetBrainsMonoNL Nerd Font",
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.cursorStyle": "line",
   "terminal.integrated.cursorStyleInactive": "outline",
