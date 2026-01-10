@@ -74,6 +74,8 @@
   "terminal.integrated.fontWeightBold": "301",
   "terminal.integrated.inheritEnv": false,
   "terminal.integrated.shellIntegration.enabled": false,
+  "terminal.integrated.letterSpacing": 1.2,
+  "terminal.integrated.lineHeight": 1.2,
 
   // html
   "[html]": {
