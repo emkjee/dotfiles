@@ -70,8 +70,10 @@
 "type.enum.variant" = { modifiers = ["italic"] }
 
 "ui.background" = { bg = "bg0" }
-"ui.bufferline" = { fg = "fg1", bg = "bg1" }
+"ui.bufferline" = { fg = "#ddc7a1", bg = "bg3", modifiers = ["italic"] }
+# "ui.bufferline" = { fg = "#1d2021", bg = "fg4" , underline.stype="line"}
 "ui.bufferline.active" = { fg = "bg0", bg = "yellow0" }
+# "ui.bufferline.active" = { fg = "#1d2021", bg = "fg4" }
 "ui.bufferline.background" = { bg = "bg2" }
 
 "ui.cursor" = { fg = "bg1", bg = "bg2" }
