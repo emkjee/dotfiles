@@ -8,6 +8,7 @@
   "diffEditor.ignoreTrimWhitespace": false,
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 200,
+  "chat.disableAIFeatures": true,
 
   // workbench
   "workbench.startupEditor": "none",
