@@ -109,9 +109,14 @@ line-number         = "relative"
 mouse               = true
 bufferline          = "always"
 color-modes         = true
-completion-timeout  = 5 ## instantly render completions
+completion-timeout  = 250 ## instantly render completions <- disable it as it is annoying
 popup-border        = "all" ## make popups look a bit tidy
 end-of-line-diagnostics = "disable"
+preview-completion-insert = false ## to not insert the selection
+
+[editor.smart-tab]  
+enable = true
+supersede-menu = true
 
 [editor.inline-diagnostics]
 cursor-line = "hint"
