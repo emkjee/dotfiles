@@ -1,0 +1,221 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+[](color_orange)\
+$os\
+[](fg:color_orange bg:color_yellow2)\
+[](fg:color_yellow2 bg:color_yellow)\
+$directory\
+[](fg:color_yellow bg:color_aqua2)\
+[](fg:color_aqua2 bg:color_aqua)\
+$git_branch\
+$git_status\
+[](fg:color_aqua bg:color_blue2)\
+[](fg:color_blue2 bg:color_blue)\
+$c\
+$cpp\
+$rust\
+$golang\
+$nodejs\
+$php\
+$java\
+$kotlin\
+$haskell\
+$python\
+$lua\
+[](fg:color_blue bg:color_bg3)\
+$docker_context\
+$conda\
+$pixi\
+[](fg:color_bg3 bg:color_bg1)\
+$time\
+[ ](fg:color_bg1)\
+$cmd_duration\
+[$shlvl$character](color_fg0)"""
+
+palette = 'gruvbox_dark'
+
+[character]
+disabled = false
+success_symbol = '[]( fg:color_green)'
+error_symbol = '[]( fg:color_orange2)'
+vimcmd_symbol = '[]( fg:color_green)'
+vimcmd_replace_one_symbol = '[]( fg:color_purple)'
+vimcmd_replace_symbol = '[]( fg:color_purple)'
+vimcmd_visual_symbol = '[]( fg:color_yellow)'
+
+[os]
+disabled = false
+style = "bg:color_orange fg:color_fg0"
+format = '[$symbol ]($style)'
+
+[os.symbols]
+Windows = "󰍲"
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = "󰀵"
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+Arch = "󰣇"
+Artix = "󰣇"
+EndeavourOS = ""
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
+Pop = ""
+
+[username]
+show_always = true
+style_user = "bg:color_orange fg:color_fg0"
+style_root = "bg:color_orange fg:color_fg0"
+format = '[ $user ]($style)'
+
+[directory.substitutions]
+"Documents" = "󰈙"
+"Downloads" = ""
+"Music" = "󰝚"
+"Pictures" = ""
+"Developer" = "󰲋"
+"dotfiles" = ""
+
+[directory]
+read_only = " "
+truncation_length = 3
+truncation_symbol = "…/"
+truncate_to_repo = true
+style = "fg:italic color_bg0 bg:color_yellow"
+format = "[  $path ]($style)"
+
+[git_branch]
+symbol = ""
+style = "fg:color_fg0 bg:color_aqua"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = "fg:color_fg0 bg:color_aqua"
+format = '([\[$all_status$ahead_behind\] ]($style))'
+
+[nodejs]
+symbol = ""
+style = "fg:color_fg0 bg:color_blue"
+format = '[ $symbol( $version) ]($style)'
+
+[c]
+symbol = " "
+style = "fg:color_fg0 bg:color_blue"
+format = '[ $symbol( $version) ]($style)'
+
+[cpp]
+symbol = " "
+style = "fg:color_fg0 bg:color_blue"
+format = '[ $symbol( $version) ]($style)'
+
+[lua]
+symbol = "" 
+style = "fg:color_fg0 bg:color_blue"
+format = '[ $symbol ($version) ]($style)'
+version_format = "${raw}"
+
+[golang]
+symbol = ""
+style = "fg:color_fg0 bg:color_blue"
+format = '[ $symbol( $version) ]($style)'
+
+[php]
+symbol = ""
+style = "fg:color_fg0 bg:color_blue"
+format = '[ $symbol( $version) ]($style)'
+
+[java]
+symbol = ""
+style = "fg:color_fg0 bg:color_blue"
+format = '[ $symbol( $version) ]($style)'
+
+[kotlin]
+symbol = ""
+style = "fg:color_fg0 bg:color_blue"
+format = '[ $symbol( $version) ]($style)'
+
+[haskell]
+symbol = ""
+style = "fg:color_fg0 bg:color_blue"
+format = '[ $symbol( $version) ]($style)'
+
+[python]
+symbol = ""
+style = "fg:color_fg0 bg:color_blue"
+format = '[ $symbol ($version) (\($virtualenv\)) ]($style)'
+version_format = "v${raw}"
+
+[rust]
+symbol = ""
+style = "fg:color_fg0 bg:color_blue"
+format = '[ $symbol ($version) ]($style)'
+
+[docker_context]
+symbol = ""
+style = "bg:color_bg3"
+format = '[[ $symbol( $context) ](fg: color_fg0 bg:color_bg3)]($style)'
+
+[conda]
+style = "bg:color_bg3"
+ignore_base = false
+format = '[[ $symbol( $environment) ](fg: color_fg0 bg:color_bg3)]($style)'
+
+[pixi]
+style = "bg:color_bg3"
+format = '[[ $symbol( $version)( $environment) ](fg: color_fg0 bg:color_bg3)]($style)'
+
+[time]
+disabled = false
+time_format = "%R"
+style = "fg:color_fg0 bg:color_bg1"
+format = '[  $time ]($style)'
+
+[cmd_duration]
+disabled = false
+show_milliseconds = false
+show_notifications = true
+min_time_to_notify = 45000
+min_time = 5000
+style = " italic color_orange2"
+format = "[took $duration ]($style)"
+
+[shlvl]
+disabled = false
+symbol = "󰨊"
+style = " italic color_fg0"
+format = '[$symbol-($shlvl) ]($style)'
+
+[line_break]
+disabled = true
+
+[fill]
+symbol = ' '
+
+[palettes.gruvbox_dark]
+color_bg0_h = "#1d2021"
+color_bg0 = "#282828"
+color_bg1 = '#3c3836'
+color_bg3 = '#665c54'
+color_fg0 = '#fbf1c7'
+color_blue = '#458588'
+color_blue2 = '#83a598'
+color_aqua = '#689d6a'
+color_aqua2 = '#8ec07c'
+color_green = '#98971a'
+color_orange = '#d65d0e'
+color_orange2 = '#fe8019'
+color_purple = '#b16286'
+color_red = '#cc241d'
+color_red2 = '#fb4934'
+color_yellow = '#d79921'
+color_yellow2 = "#fabd2f"
