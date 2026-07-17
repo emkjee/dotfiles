@@ -1,0 +1,164 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+[╭─](bold text)\
+$os\
+[](lavender)\
+$username\
+[](fg:lavender bg:rosewater)\
+[](fg:rosewater bg:peach)\
+$directory\
+[](fg:peach bg:#99d1db)\
+[](fg:#99d1db bg:teal)\
+$git_branch\
+$git_status\
+[](fg:teal bg:lavender)\
+[](fg:lavender bg:blue)\
+$golang\
+$lua\
+$python\
+$rust\
+[](fg:blue bg:subtext0)\
+[](fg:subtext0 bg:surface0)\
+$time\
+[ ](fg:surface0)\
+$fill\
+$cmd_duration
+[╰─$shlvl$character](bold text)"""
+
+palette = 'catppuccin_mocha'
+
+[character]
+success_symbol = "[❯](text)"
+error_symbol = "[❯](red)"
+vimcmd_symbol = "[❮](green)"
+
+[palettes.catppuccin_mocha]
+rosewater = "#f5e0dc"
+flamingo = "#f2cdcd"
+pink = "#f5c2e7"
+mauve = "#cba6f7"
+red = "#f38ba8"
+maroon = "#eba0ac"
+peach = "#fab387"
+yellow = "#f9e2af"
+green = "#a6e3a1"
+teal = "#94e2d5"
+sky = "#89dceb"
+sapphire = "#74c7ec"
+blue = "#89b4fa"
+lavender = "#b4befe"
+text = "#cdd6f4"
+subtext1 = "#bac2de"
+subtext0 = "#a6adc8"
+overlay2 = "#9399b2"
+overlay1 = "#7f849c"
+overlay0 = "#6c7086"
+surface2 = "#585b70"
+surface1 = "#45475a"
+surface0 = "#313244"
+base = "#1e1e2e"
+mantle = "#181825"
+crust = "#11111b"
+
+[os.symbols]
+Windows = "󰍲"
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = "󰀵"
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+Arch = "󰣇"
+Artix = "󰣇"
+EndeavourOS = ""
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
+Pop = ""
+
+[os]
+disabled = false
+style = "fg:bold text"
+format = '[$symbol ]($style)'
+
+[username]
+show_always = true
+style_user = "fg:bold base bg:lavender"
+style_root = "fg:bold base bg:lavender"
+format = '[ $user ]($style)'
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+"Developer" = "󰲋 "
+"dotfiles" = ""
+
+[directory]
+read_only = " "
+truncation_length = 3
+truncation_symbol = "…/"
+truncate_to_repo = true
+style = "fg:bold italic base bg:peach"
+format = "[ $path ]($style)"
+
+[git_branch]
+symbol = ""
+style = "fg:bold italic base bg:teal"
+format = '[ on $symbol $branch ]($style)'
+
+[git_status]
+style = "fg:bold italic base bg:teal"
+format = '([\[$all_status$ahead_behind\] ]($style))'
+
+[golang]
+symbol = ""
+style = "fg:bold italic base bg:blue"
+format = '[ via $symbol ($version) ]($style)'
+
+[lua]
+symbol = ""
+style = "fg:bold italic base bg:blue"
+format = '[ via $symbol ($version) ]($style)'
+version_format = "v${raw}"
+
+[python]
+symbol = ""
+style = "fg:bold italic base bg:blue"
+format = '[ via $symbol ($version) (\($virtualenv\) )]($style)'
+version_format = "v${raw}"
+
+[rust]
+symbol = ""
+style = "fg:bold italic base bg:blue"
+format = '[ via $symbol ($version) ]($style)'
+
+[time]
+disabled = false
+time_format = "%R"
+style = "fg:text bg:surface0"
+format = '[  $time ]($style)'
+
+[fill]
+symbol = ' '
+
+[cmd_duration]
+min_time = 500
+show_milliseconds = false
+disabled = false
+style = "bold italic red"
+
+[shlvl]
+disabled = false
+symbol = "󰨊"
+style = "bold italic red"
+format = '[ $symbol ($shlvl) ]($style)'
