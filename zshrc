@@ -25,6 +25,8 @@ source $DOTDIR/functions/chg_prompt.zsh
 ## dempty = to find and delete all empty subdirectories within the current directory
 ## brlink = to find broken links
 ## crq = cargo run quiet
+## va = activate virtual env [python]
+## vd = deactivate virtual env [python]
 # ------------------------------------------------
 alias ..="cd ../"
 alias ...="cd ../../"
@@ -45,6 +47,8 @@ alias fempty="fd . -t d -t e"
 alias dempty="fd . -t d -t e --exec trash -v {}"
 alias brlink="fd -t l -L"
 alias crq="cargo run --quiet"
+alias va='if [ -d ".venv" ]; then source .venv/bin/activate; else echo "❌ No .venv folder found in this directory."; fi'
+alias vd='deactivate'
 
 
 ## setup plugins ---------------------------------
