@@ -116,7 +116,7 @@ preview-completion-insert = false ## to not insert the selection
 
 [editor.smart-tab]  
 enable = true
-supersede-menu = true
+# supersede-menu = true
 
 [editor.inline-diagnostics]
 cursor-line = "hint"
