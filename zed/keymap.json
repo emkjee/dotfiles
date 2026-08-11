@@ -1,0 +1,8 @@
+[
+  {
+    "context": "Workspace",
+      "bindings": {
+      "cmd-k f": "workspace::CloseProject"
+    }
+  }
+]
