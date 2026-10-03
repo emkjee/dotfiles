@@ -39,6 +39,21 @@
       "source": "hushlogin",
       "target": ".hushlogin",
       "type": "file"
+    },
+    {
+      "source": "zed/tasks.json",
+      "target": ".config/zed/tasks.json",
+      "type": "file"
+    },
+    {
+      "source": "zed/keymap.json",
+      "target": ".config/zed/keymap.json",
+      "type": "file"
+    },
+    {
+      "source": "zed/settings.json",
+      "target": ".config/zed/settings.json",
+      "type": "file"
     }
   ]
 }
