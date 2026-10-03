@@ -1,0 +1,197 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+[╭─](fg:#DCD7BA)\
+[](bg:#1F1F28 fg:#7E9CD8)\
+$os\
+[](bg:#7E9CD8 fg:#E6C384)\
+$directory\
+[](bg:#E6C384 fg:#DCD7BA)\
+$git_branch\
+$git_status\
+[](bg:#DCD7BA fg:#7AA89F)\
+$c\
+$cpp\
+$rust\
+$golang\
+$nodejs\
+$php\
+$java\
+$kotlin\
+$haskell\
+$python\
+$lua\
+[](bg:#7AA89F fg:#363646)\
+$time\
+[](bg:#363646 fg:#1F1F28)\
+$cmd_duration
+[╰─](fg:#DCD7BA)\
+$shlvl(fg:#DCA5613)\
+$character(fg:#DCD7BA)"""
+
+[character]
+disabled = false
+success_symbol = '[❯](fg:#DCD7BA)'
+error_symbol = '[❯](fg:#D27E99)'
+vimcmd_symbol = '[❮](fg:#7AA89F)'
+vimcmd_replace_one_symbol = '[❮](fg:#7AA89F)'
+vimcmd_replace_symbol = '[❮](fg:#7AA89F)'
+vimcmd_visual_symbol = '[❮](fg:#7AA89F)'
+
+[os]
+disabled = false
+style = "bg:#7E9CD8 fg:#1F1F28"
+format = '[ $symbol ]($style)'
+
+[os.symbols]
+Windows = "󰍲"
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = "󰀵"
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+Arch = "󰣇"
+Artix = "󰣇"
+EndeavourOS = ""
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
+Pop = ""
+
+[username]
+show_always = true
+style_user = "bg:#FFA066 fg:#1F1F28"
+style_root = "bg:#FFA066 fg:#1F1F28"
+format = '[ $user ]($style)'
+
+[directory.substitutions]
+"Documents" = "󰈙"
+"Downloads" = ""
+"Music" = "󰝚"
+"Pictures" = ""
+"Developer" = "󰲋"
+"dotfiles" = ""
+
+[directory]
+read_only = " "
+truncation_length = 3
+truncation_symbol = "…/"
+truncate_to_repo = true
+style = "bg:#E6C384 fg:#1F1F28"
+format = "[  $path ]($style)"
+
+[git_branch]
+symbol = ""
+style = "fg:italic #1F1F28 bg:#DCD7BA"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = "fg:italic #1F1F28 bg:#DCD7BA"
+format = '([\[$all_status$ahead_behind\] ]($style))'
+
+[nodejs]
+symbol = ""
+style = "fg:#16161D bg:#7AA89F"
+format = '[ $symbol( $version) ]($style)'
+
+[c]
+symbol = " "
+style = "fg:#16161D bg:#7AA89F"
+format = '[ $symbol( $version) ]($style)'
+
+[cpp]
+symbol = " "
+style = "fg:#16161D bg:#7AA89F"
+format = '[ $symbol( $version) ]($style)'
+
+[lua]
+symbol = "" 
+style = "fg:#16161D bg:#7AA89F"
+format = '[ $symbol ($version) ]($style)'
+version_format = "${raw}"
+
+[golang]
+symbol = ""
+style = "fg:#16161D bg:#7AA89F"
+format = '[ $symbol( $version) ]($style)'
+
+[php]
+symbol = ""
+style = "fg:#16161D bg:#7AA89F"
+format = '[ $symbol( $version) ]($style)'
+
+[java]
+symbol = ""
+style = "fg:#16161D bg:#7AA89F"
+format = '[ $symbol( $version) ]($style)'
+
+[kotlin]
+symbol = ""
+style = "fg:#16161D bg:#7AA89F"
+format = '[ $symbol( $version) ]($style)'
+
+[haskell]
+symbol = ""
+style = "fg:#16161D bg:#7AA89F"
+format = '[ $symbol( $version) ]($style)'
+
+[python]
+symbol = ""
+style = "fg:#16161D bg:#7AA89F"
+format = '[ $symbol ($version) (\($virtualenv\)) ]($style)'
+version_format = "v${raw}"
+
+[rust]
+symbol = ""
+style = "fg:#16161D bg:#7AA89F"
+format = '[ $symbol ($version) ]($style)'
+
+[docker_context]
+symbol = ""
+style = "bg:#7E9CD8"
+format = '[[ $symbol( $context) ](fg:#16161D bg:#7E9CD8)]($style)'
+
+[conda]
+style = "bg:#7E9CD8"
+ignore_base = false
+format = '[[ $symbol( $environment) ](fg:#16161D bg:#7E9CD8)]($style)'
+
+[pixi]
+style = "bg:#7E9CD8"
+format = '[[ $symbol( $version)( $environment) ](fg:#16161D bg:#7E9CD8)]($style)'
+
+[time]
+disabled = false
+time_format = "%R"
+style = "fg:#DCD7BA bg:#363646"
+format = '[  $time ]($style)'
+
+[cmd_duration]
+disabled = false
+show_milliseconds = false
+show_notifications = true
+min_time_to_notify = 45000
+min_time = 5000
+style = "italic #FFA066"
+format = "[ took $duration ]($style)"
+
+[shlvl]
+disabled = false
+symbol = "󰨊"
+style = "italic #E46876"
+format = '[ $symbol-($shlvl) ]($style)'
+
+[line_break]
+disabled = true
+
+[fill]
+style = "fg:#DCD7BA"
+symbol = "─"
