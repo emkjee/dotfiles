@@ -37,3 +37,6 @@ typeset -U path
 
 ## set default config directory
 export XDG_CONFIG_HOME="$HOME/.config"
+
+## initialize zsh Tab-completion
+autoload -Uz compinit && compinit
