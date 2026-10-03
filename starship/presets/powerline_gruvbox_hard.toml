@@ -31,18 +31,18 @@ $pixi\
 $time\
 [ ](fg:color_bg1)\
 $cmd_duration\
-[$shlvl$character](bold color_fg0)"""
+[$shlvl$character](color_fg0)"""
 
 palette = 'gruvbox_dark'
 
 [character]
 disabled = false
-success_symbol = '[](bold fg:color_green)'
-error_symbol = '[](bold fg:color_orange2)'
-vimcmd_symbol = '[](bold fg:color_green)'
-vimcmd_replace_one_symbol = '[](bold fg:color_purple)'
-vimcmd_replace_symbol = '[](bold fg:color_purple)'
-vimcmd_visual_symbol = '[](bold fg:color_yellow)'
+success_symbol = '[](fg:color_green)'
+error_symbol = '[](fg:color_orange2)'
+vimcmd_symbol = '[](fg:color_green)'
+vimcmd_replace_one_symbol = '[](fg:color_purple)'
+vimcmd_replace_symbol = '[](fg:color_purple)'
+vimcmd_visual_symbol = '[](fg:color_yellow)'
 
 [os]
 disabled = false
@@ -91,16 +91,16 @@ read_only = " "
 truncation_length = 3
 truncation_symbol = "…/"
 truncate_to_repo = true
-style = "fg:bold italic color_bg0 bg:color_yellow"
+style = "fg:italic color_bg0 bg:color_yellow"
 format = "[  $path ]($style)"
 
 [git_branch]
 symbol = ""
-style = "fg:bold color_fg0 bg:color_aqua"
+style = "fg:color_fg0 bg:color_aqua"
 format = '[ $symbol $branch ]($style)'
 
 [git_status]
-style = "fg:bold color_fg0 bg:color_aqua"
+style = "fg:color_fg0 bg:color_aqua"
 format = '([\[$all_status$ahead_behind\] ]($style))'
 
 [nodejs]
@@ -119,7 +119,7 @@ style = "fg:color_fg0 bg:color_blue"
 format = '[ $symbol( $version) ]($style)'
 
 [lua]
-symbol = "" 
+symbol = ""
 style = "fg:color_fg0 bg:color_blue"
 format = '[ $symbol ($version) ]($style)'
 version_format = "${raw}"
@@ -152,7 +152,7 @@ format = '[ $symbol( $version) ]($style)'
 [python]
 symbol = ""
 style = "fg:color_fg0 bg:color_blue"
-format = '[ $symbol ($version)(\($virtualenv\)) ]($style)'
+format = '[ $symbol ($version) (\($virtualenv\)) ]($style)'
 version_format = "v${raw}"
 
 [rust]
@@ -163,16 +163,16 @@ format = '[ $symbol ($version) ]($style)'
 [docker_context]
 symbol = ""
 style = "bg:color_bg3"
-format = '[[ $symbol( $context) ](fg:bold color_fg0 bg:color_bg3)]($style)'
+format = '[[ $symbol( $context) ](fg:color_fg0 bg:color_bg3)]($style)'
 
 [conda]
 style = "bg:color_bg3"
 ignore_base = false
-format = '[[ $symbol( $environment) ](fg:bold color_fg0 bg:color_bg3)]($style)'
+format = '[[ $symbol( $environment) ](fg:color_fg0 bg:color_bg3)]($style)'
 
 [pixi]
 style = "bg:color_bg3"
-format = '[[ $symbol( $version)( $environment) ](fg:bold color_fg0 bg:color_bg3)]($style)'
+format = '[[ $symbol( $version)( $environment) ](fg:color_fg0 bg:color_bg3)]($style)'
 
 [time]
 disabled = false
@@ -183,16 +183,16 @@ format = '[  $time ]($style)'
 [cmd_duration]
 disabled = false
 show_milliseconds = false
-show_notifications = true
-min_time_to_notify = 45000
+# show_notifications = true
+# min_time_to_notify = 45000
 min_time = 5000
-style = "bold italic color_orange2"
+style = "italic color_orange2"
 format = "[took $duration ]($style)"
 
 [shlvl]
 disabled = false
 symbol = "󰨊"
-style = "bold italic color_fg0"
+style = "italic color_fg0"
 format = '[$symbol-($shlvl) ]($style)'
 
 [line_break]
