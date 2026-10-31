@@ -13,6 +13,7 @@ A few small zsh functions I use all the time. They're short on purpose, so they'
 | [`dvir`](#dvir) | Deactivate the active Python venv |
 | [`femp`](#femp) | Find empty directories |
 | [`demp`](#demp) | Trash empty directories |
+| [`pset`](#pset) | Switch the Starship prompt preset |
 
 ---
 
@@ -33,7 +34,8 @@ dotfiles/
     ├── avir.zsh
     ├── dvir.zsh
     ├── femp.zsh
-    └── demp.zsh
+    ├── demp.zsh
+    └── pset.zsh
 ```
 
 **Include them**
@@ -226,6 +228,27 @@ demp      # trash it
 > **Note:** one run clears one layer. If a directory only held empty ones, it shows up on the next run, so repeat until `femp` prints nothing.
 
 > **Careful:** it works on everything below where you run it, so keep an eye on where you are. Run `cds` first, because a `.DS_Store` makes a directory count as non-empty.
+
+---
+
+#### `pset`
+
+Pick a Starship prompt preset and link it as the active config. Source: [`functions/pset.zsh`](functions/pset.zsh)
+
+```zsh
+pset      # choose a preset from the list, with a preview
+```
+
+- Lists the `.toml` files in `$DOTDIR/starship`, with a syntax-highlighted preview.
+- Symlinks `~/.config/starship.toml` straight to the one you pick, so there's no extra hop.
+- If you hit Esc, nothing changes.
+- Starship picks up the change on the next prompt, so no reload is needed.
+
+**Requires:** [fzf](https://github.com/junegunn/fzf), [fd](https://github.com/sharkdp/fd), [bat](https://github.com/sharkdp/bat) for the preview, and `$DOTDIR` set to your dotfiles directory.
+
+> **Note:** it refuses to run if `~/.config/starship.toml` is a real file instead of a symlink, so it can't overwrite a config you wrote by hand. Move that file into `$DOTDIR/starship` first. Every `.toml` in that folder shows up as a preset, so keep other `.toml` files out of it.
+
+> **Note:** if `STARSHIP_CONFIG` is set to some other file, Starship reads that one and `pset` will appear to do nothing. Check with `echo $STARSHIP_CONFIG`; it should be empty or point at `~/.config/starship.toml`.
 
 ---
 
