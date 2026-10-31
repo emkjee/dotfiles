@@ -1,54 +1,47 @@
-## setup-functions -------------------------------
-## ensure_folder = check if a folder exists, if not create it
-## ensure_exists = check if a command exists
-## mkcd = to create a folder if doesn't exists and cd into it
-## chg_prompt = to change starship prompt to one of the available presets
+## shell-functions -------------------------------
+source $DOTDIR/functions/crun.zsh
+source $DOTDIR/functions/seek.zsh
+source $DOTDIR/functions/mkcd.zsh
+source $DOTDIR/functions/help.zsh
+source $DOTDIR/functions/exst.zsh
+source $DOTDIR/functions/avir.zsh
+source $DOTDIR/functions/dvir.zsh
+source $DOTDIR/functions/femp.zsh
+source $DOTDIR/functions/demp.zsh
+source $DOTDIR/functions/pset.zsh
 # ------------------------------------------------
-source $DOTDIR/functions/ensure_folder.sh
-source $DOTDIR/functions/ensure_exists.sh
-source $DOTDIR/functions/mkcd.sh
-source $DOTDIR/functions/chg_prompt.zsh
 
 
 ## setup_aliases ---------------------------------
-## ".." = to go up by 1 level
-## "..." = to go up by 2 level
-## "...." = to go up by 3 level
-## trail = sanity resumed while displaying path
-## e = to kickoff helix
-## ek = to kickoff kitty
-## ez = to kickoff .zshrc
-## ls / ll / dir = default to lsd
-## rm -i = rm interactive
-## cds = to clean all .DS_Store files in current directory / sub directories
-## fempty = to find all empty subdirectories within the current directory
-## dempty = to find and delete all empty subdirectories within the current directory
-## brlink = to find broken links
-## crq = cargo run quiet
-## va = activate virtual env [python]
-## vd = deactivate virtual env [python]
-# ------------------------------------------------
-alias ..="cd ../"
-alias ...="cd ../../"
-alias ....="cd ../../../"
+alias rm='rm -I'
+alias rz='exec zsh'
 alias trail='<<<${(F)path}'
-alias e="hx"
-alias ek="hx ~/.config/kitty"
-alias ez="hx ~/.zshrc"
-alias ls="lsd --git"
-alias dir="lsd -lArt --git"
-alias ll="lsd -lArt --git"
-alias rm="rm -i"
-alias cds="fd '.DS_Store' . --hidden --no-ignore --type f -E .git -x trash -v"
-alias brc="brew cleanup --prune=all"
-alias brl="brew list"
-alias bro="brew outdated"
-alias fempty="fd . -t d -t e"
-alias dempty="fd . -t d -t e --exec trash -v {}"
-alias brlink="fd -t l -L"
-alias crq="cargo run --quiet"
-alias va='if [ -d ".venv" ]; then source .venv/bin/activate; else echo "❌ No .venv folder found in this directory."; fi'
-alias vd='deactivate'
+
+setopt auto_cd
+alias -g ...='../..'
+alias -g ....='../../..'
+alias -g .....='../../../..'
+
+alias e='hx'
+alias ek='e ~/.config/kitty'
+alias eh='e ~/.config/helix'
+alias ez='e ~/.zshrc'
+alias es='e ~/.config/starship.toml'
+
+alias ls='lsd --git'
+alias ll='lsd -lArt --git'
+alias lt='lsd --tree --git'
+
+alias cds='fd -g .DS_Store -H -I -t f -E .git -X trash -v'
+alias fbl='fd -t l -L'
+alias fem='fd . -t d -t e'
+alias dem='fd . -t d -t e -X trash -v'
+
+alias brc='brew cleanup --prune=all'
+alias brl='brew list'
+alias bro='brew outdated'
+alias bru='brew update && brew upgrade'
+# ------------------------------------------------
 
 
 ## setup plugins ---------------------------------
@@ -56,14 +49,15 @@ alias vd='deactivate'
 ## zoxide = smarter cd https://github.com/ajeetdsouza/zoxide
 ## zsh-syntax-highlighting = syntax highlighting  https://github.com/zsh-users/zsh-syntax-highlighting
 ## zsh-auto-suggestions = auto suggestions https://github.com/zsh-users/zsh-autosuggestions
-# ------------------------------------------------
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+# ------------------------------------------------
 
 
-## refs
+## refs ------------------------------------------
 ## for DS_Store - https://gist.github.com/lohenyumnam/2b127b9c3d1435dc12a33613c44e6308
 ## for aliases - https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/common-aliases/common-aliases.plugin.zsh
 ## for exists - https://stackoverflow.com/questions/592620/how-can-i-check-if-a-program-exists-from-a-bash-script/677212#677212
+# ------------------------------------------------
