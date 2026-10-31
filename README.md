@@ -1,4 +1,4 @@
-## ZSH Functions
+## Zsh Functions
 
 A few small zsh functions I use all the time. They're short on purpose, so they're quick to use and easy to read.
 
@@ -9,6 +9,10 @@ A few small zsh functions I use all the time. They're short on purpose, so they'
 | [`mkcd`](#mkcd) | Create a directory and move into it |
 | [`help`](#help) | Open a man page in Helix |
 | [`exst`](#exst) | Check whether a command exists |
+| [`avir`](#avir) | Activate the Python venv in the current directory |
+| [`dvir`](#dvir) | Deactivate the active Python venv |
+| [`femp`](#femp) | Find empty directories |
+| [`demp`](#demp) | Trash empty directories |
 
 ---
 
@@ -25,7 +29,11 @@ dotfiles/
     ├── crun.zsh
     ├── mkcd.zsh
     ├── help.zsh
-    └── exst.zsh
+    ├── exst.zsh
+    ├── avir.zsh
+    ├── dvir.zsh
+    ├── femp.zsh
+    └── demp.zsh
 ```
 
 **Include them**
@@ -150,3 +158,144 @@ exst nope     # Command 'nope' is NOT available
 - Running it with no argument prints a message and exits with `2`.
 
 > **Note:** it only looks at the first argument.
+
+---
+
+#### `avir`
+
+Activate the Python virtual environment in the current directory. Source: [`functions/avir.zsh`](functions/avir.zsh)
+
+```zsh
+avir      # activates ./.venv
+```
+
+- Looks for `.venv/bin/activate` in the current directory and sources it.
+- If there's no `.venv` there, it prints an error and returns `1`.
+
+> **Note:** it only looks in the current directory, so run it from the project root.
+
+---
+
+#### `dvir`
+
+Deactivate the active Python virtual environment. Source: [`functions/dvir.zsh`](functions/dvir.zsh)
+
+```zsh
+dvir      # deactivates whatever venv is active
+```
+
+- Only calls `deactivate` if a venv is active, so you don't get a "command not found" when none is.
+- If nothing is active, it just prints "No venv active."
+
+---
+
+#### `femp`
+
+Find empty directories below the current one. Source: [`functions/femp.zsh`](functions/femp.zsh)
+
+```zsh
+femp                # list empty directories here
+femp some/path      # look somewhere else
+```
+
+- Only lists, never deletes. Run it before `demp` to see what's about to go.
+- Extra arguments go straight to `fd`.
+- Hidden and gitignored directories are skipped, same as `fd` does by default.
+
+**Requires:** [fd](https://github.com/sharkdp/fd)
+
+> **Note:** it only shows directories that are empty right now. If a directory only holds empty ones, it shows up after those are gone.
+
+---
+
+#### `demp`
+
+Trash the empty directories below the current one. Source: [`functions/demp.zsh`](functions/demp.zsh)
+
+```zsh
+femp      # preview what's empty
+demp      # trash it
+```
+
+- Everything goes to the Trash in a single call, so a mistake is recoverable.
+- Hidden and gitignored directories are skipped, so `.git` is safe.
+- It does one sweep, nothing more.
+
+**Requires:** [fd](https://github.com/sharkdp/fd), [trash](https://github.com/ali-rantakari/trash)
+
+> **Note:** one run clears one layer. If a directory only held empty ones, it shows up on the next run, so repeat until `femp` prints nothing.
+
+> **Careful:** it works on everything below where you run it, so keep an eye on where you are. Run `cds` first, because a `.DS_Store` makes a directory count as non-empty.
+
+---
+
+## Aliases
+
+The short ones I type all day. They live in one block in my `~/.zshrc`, under a `## setup_aliases` header, so they're easy to find and easy to trim.
+
+### Shell
+
+| Alias | What it does |
+| --- | --- |
+| `rm` | `rm -I`, asks once before deleting more than three files or a directory |
+| `rz` | Reload the shell with `exec zsh` |
+| `trail` | Print `$PATH` one entry per line |
+
+### Navigation
+
+`auto_cd` is on, so typing a directory name (or just `..`) takes you there. The dots are global aliases, so they work anywhere in a command, not only with `cd`:
+
+| Alias | Expands to |
+| --- | --- |
+| `...` | `../..` |
+| `....` | `../../..` |
+| `.....` | `../../../..` |
+
+```zsh
+cd ...            # up two levels
+ls ....           # list three levels up
+```
+
+> **Note:** a standalone `...` always expands, so `echo ...` prints `../..`. Ranges like `git diff main...feature` are fine, since the dots are part of a longer word.
+
+### Editing
+
+Everything goes through `e`, so switching editors later is a one-line change.
+
+| Alias | Opens |
+| --- | --- |
+| `e` | Helix (`hx`) |
+| `ek` | `~/.config/kitty` |
+| `eh` | `~/.config/helix` |
+| `ez` | `~/.zshrc` |
+| `es` | `~/.config/starship.toml` |
+
+### Listing
+
+| Alias | What it does |
+| --- | --- |
+| `ls` | `lsd` with git status |
+| `ll` | Long list, hidden files included, newest at the bottom |
+| `lt` | Tree view |
+
+### Cleanup
+
+These use `fd` and `trash`, so nothing is deleted for good. For empty directories, see `femp` and `demp` above.
+
+| Alias | What it does |
+| --- | --- |
+| `cds` | Trash every `.DS_Store` below the current directory |
+| `fbl` | Find broken symlinks |
+
+> **Careful:** `cds` walks everything below where you run it, so don't run it from `~` or `/`.
+
+**Requires:** [lsd](https://github.com/lsd-rs/lsd), [fd](https://github.com/sharkdp/fd), [trash](https://github.com/ali-rantakari/trash), [Helix](https://helix-editor.com)
+
+### Homebrew
+
+| Alias | What it does |
+| --- | --- |
+| `brc` | Clean up, pruning the whole cache |
+| `brl` | List installed packages |
+| `bro` | Show outdated packages |
+| `bru` | Update, then upgrade everything |
