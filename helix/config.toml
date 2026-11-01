@@ -1,9 +1,10 @@
-theme               = "gruvbox_dark_hard"
+theme               = "hx_gruvbox"
 
 
 ## insert-mode -----------------------------------
 ## <S-tab>          = use smart tab -> https://docs.helix-editor.com/editor.html#editorsmart-tab-section
-## <C-i>            = fetch signature help when needed, auto-signature-help is now disabled, this helps in avoiding the adamant signature hint popup
+## <C-i>  <disable> = fetch signature help when needed, auto-signature-help is now disabled, this helps in avoiding the adamant signature hint popup
+## <C-space>        = fetch signature help when needed, auto-signature-help is now disabled, this helps in avoiding the adamant signature hint popup
 ## <C-[>            = to come to normal, makes a lot of sense if you have replaced capslock with ctrl
 ## <C-f>            = macOS keybinding to move right in insert mode
 ## <C-b>            = macOS keybinding to move left in insert mode
@@ -13,7 +14,8 @@ theme               = "gruvbox_dark_hard"
 # ------------------------------------------------
 [keys.insert]
 "S-tab"             = "move_parent_node_start"
-"C-i"               = "signature_help"
+# "C-i"             = "signature_help"
+"C-space"           = "signature_help"
 "C-["               = "normal_mode"
 "C-f"               = ["normal_mode", "move_char_right", "insert_mode"]
 "C-b"               = ["normal_mode", "move_char_left",  "insert_mode"]
@@ -114,7 +116,7 @@ popup-border        = "all" ## make popups look a bit tidy
 end-of-line-diagnostics = "disable"
 preview-completion-insert = false ## to not insert the selection
 
-[editor.smart-tab]  
+[editor.smart-tab]
 enable = true
 # supersede-menu = true
 
