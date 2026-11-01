@@ -1,0 +1,130 @@
+{
+  "buffer_font_weight": 300.0,
+  "use_system_window_tabs": false,
+  "active_pane_modifiers": {
+    "inactive_opacity": 0.8
+  },
+  "window_decorations": "client",
+  "helix_mode": true,
+  "base_keymap": "Zed",
+
+  "inlay_hints": {
+    "enabled": false
+  },
+  "cli_default_open_behavior": "new_window",
+  "diff_view_style": "split",
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+    "anthropic_retention": false
+  },
+  //telemetry>>>
+
+  //layout<<<
+  "debugger": {
+    "dock": "bottom"
+  },
+  "outline_panel": {
+    "dock": "left"
+  },
+  "git_panel": {
+    "dock": "left"
+  },
+  "agent": {
+    "sidebar_side": "right",
+    "dock": "right",
+    "favorite_models": [],
+    "model_parameters": []
+  },
+  "project_panel": {
+    "dock": "left",
+    "starts_open": false,
+    "default_width": 300,
+    "auto_fold_dirs": false,
+    "scrollbar": {
+      "show": "never"
+    },
+    "indent_guides": {
+      "show": "never"
+    }
+  },
+
+  "theme": {
+    "mode": "dark",
+    "light": "Gruvbox Light Hard",
+    "dark": "Gruvbox Dark Hard"
+  },
+  "theme_overrides": {
+    "Gruvbox Dark Hard": {
+      "syntax": {
+        "comment": {
+          "font_style": "italic"
+        },
+        "commend-doc": {
+          "font_style": "italic"
+        }
+      }
+    }
+  },
+  "icon_theme": {
+    "mode": "light",
+    "light": "Zed (Default)",
+    "dark": "Warm Charmed Icons"
+  },
+  "title_bar": {
+    "show_sign_in": false,
+    "show_menus": false,
+    "show_onboarding_banner": false
+  },
+
+  "ui_font_size": 19.0,
+  "gutter": {
+    "folds": true
+  },
+  "minimap": {
+    "show": "never"
+  },
+  "soft_wrap": "none",
+  //ui>>>
+
+  //<<<buffer
+  "buffer_font_family": "JetBrainsMono Nerd Font Mono",
+  "buffer_font_size": 18.0,
+  "buffer_line_height": {
+    "custom": 1.5
+  },
+  "cursor_shape": "bar",
+  "cursor_blink": true,
+  "colorize_brackets": true,
+  "show_whitespaces": "trailing",
+  "remove_trailing_whitespace_on_save": true,
+  "relative_line_numbers": "enabled",
+  //buffer>>>
+
+  //<<<terminal
+  "terminal": {
+    "font_weight": 300.0,
+    "dock": "bottom",
+    "shell": "system",
+    "font_size": 18.0,
+    "font_family": "JetBrainsMonoNL Nerd Font Mono",
+    "line_height": {
+      "custom": 1.4
+    },
+    "cursor_shape": "bar",
+    "blinking": "on"
+  },
+  //terminal>>>
+
+  "agent_ui_font_size": 17.0,
+  "agent_ui_font_family": ".ZedSans",
+  "accessible_mode": true,
+  "zoomed_padding": true,
+  "session": {
+    "trust_all_worktrees": true
+  },
+  "multi_cursor_modifier": "alt",
+  "sticky_scroll": {
+    "enabled": true
+  }
+}
