@@ -1,8 +1,27 @@
 [
   {
     "context": "Workspace",
-      "bindings": {
+    "bindings": {
       "cmd-k f": "workspace::CloseProject"
+    }
+  },
+  {
+    "context": "Editor && showing_completions",
+    "bindings": {
+      "tab": "editor::ContextMenuNext",
+      "shift-tab": "editor::ContextMenuPrevious"
+    }
+  },
+  {
+    "context": "vim_mode == insert",
+    "bindings": {
+      "ctrl-space": "editor::ShowCompletions"
+    }
+  },
+  {
+    "context": "vim_mode == insert",
+    "unbind": {
+      "ctrl-x ctrl-o": "editor::ShowCompletions"
     }
   }
 ]
