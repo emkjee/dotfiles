@@ -28,8 +28,8 @@ alias eh='e ~/.config/helix'
 alias ez='e ~/.zshrc'
 alias es='e ~/.config/starship.toml'
 
-alias ls='lsd --git'
-alias ll='lsd -lArt --git'
+alias ls='lsd --git --group-directories-first'
+alias ll='lsd -lArt --git --group-directories-first'
 alias lt='lsd --tree --git'
 
 alias cds='fd -g .DS_Store -H -I -t f -E .git -X trash -v'
