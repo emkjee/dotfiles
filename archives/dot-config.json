@@ -21,11 +21,6 @@
       "type": "directory"
     },
     {
-      "source": "starship/starship.toml",
-      "target": ".config/starship.toml",
-      "type": "file"
-    },
-    {
       "source": "zshrc",
       "target": ".zshrc",
       "type": "file"
