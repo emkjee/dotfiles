@@ -1,23 +1,23 @@
 {
   // window & miscellaneous
   "window.zoomLevel": 1,
-  "window.menuBarVisibility": "toggle",
   "breadcrumbs.enabled": false,
   "zenMode.centerLayout": false,
   "search.showLineNumbers": true,
   "diffEditor.ignoreTrimWhitespace": false,
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 200,
-  "chat.disableAIFeatures": true,
 
   // workbench
   "workbench.startupEditor": "none",
-  "workbench.colorTheme": "Gruvbox Material Dark",
-  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Winter is Coming (Dark Blue)",
   "workbench.activityBar.location": "top",
   "workbench.editor.editorActionsLocation": "titleBar",
 
-  // theme - gruvboxMaterial
+  // extensions
+  "extensions.ignoreRecommendations": true,
+
+  // theme - gruvboxMaterial [extension uninstalled, kept for future]
   "gruvboxMaterial.highContrast": true,
   "gruvboxMaterial.italicComments": true,
   "gruvboxMaterial.italicKeywords": true,
@@ -27,7 +27,7 @@
   "gruvboxMaterial.darkWorkbench": "flat",
   "gruvboxMaterial.darkPalette": "original",
 
-  // theme - everforest
+  // theme - everforest [extension uninstalled, kept for future]
   "everforest.highContrast": true,
   "everforest.italicComments": true,
   "everforest.italicKeywords": true,
@@ -51,16 +51,20 @@
   "editor.stickyScroll.enabled": true,
   "editor.trimAutoWhitespace": true,
 
-  // editor.font settings
+  // code folding
+  "editor.folding": true,
+  "editor.foldingStrategy": "auto",
+  "editor.showFoldingControls": "mouseover",
+
+  // font settings
   "editor.fontFamily": "JetBrainsMonoNL Nerd Font",
   "editor.inlayHints.fontFamily": "BlexMono Nerd Font",
   "editor.fontSize": 15,
   "editor.fontLigatures": false,
-  "editor.fontWeight": "301",
   "editor.lineHeight": 25,
   "editor.letterSpacing": 0.3,
 
-  // editor.cursor settings
+  // cursor settings
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.cursorBlinking": "smooth",
   "editor.cursorStyle": "line-thin",
@@ -71,8 +75,6 @@
   "terminal.integrated.cursorStyle": "line",
   "terminal.integrated.cursorStyleInactive": "outline",
   "terminal.integrated.fontSize": 15,
-  "terminal.integrated.fontWeight": "301",
-  "terminal.integrated.fontWeightBold": "301",
   "terminal.integrated.inheritEnv": false,
   "terminal.integrated.shellIntegration.enabled": false,
   "terminal.integrated.letterSpacing": 1.2,
@@ -97,10 +99,11 @@
   },
 
   // javascript
-  "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
-  "javascript.inlayHints.parameterTypes.enabled": true,
-  "javascript.inlayHints.variableTypes.enabled": true,
-  "javascript.inlayHints.parameterNames.enabled": "all",
+  "js/ts.inlayHints.functionLikeReturnTypes.enabled": true,
+  "js/ts.inlayHints.parameterTypes.enabled": true,
+  "js/ts.inlayHints.variableTypes.enabled": true,
+  "js/ts.inlayHints.parameterNames.enabled": "all",
+  "js/ts.inlayHints.propertyDeclarationTypes.enabled": true,
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true,
@@ -108,20 +111,15 @@
     "prettier.tabWidth": 2
   },
 
-  // typescript
-  "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
-  "typescript.inlayHints.parameterTypes.enabled": true,
-  "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
-  "typescript.inlayHints.variableTypes.enabled": true,
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true,
-    "editor.tabSize": 2
+    "editor.tabSize": 2,
+    "prettier.tabWidth": 2
   },
 
   // python
-  "python.locator": "js",
-  "python.defaultInterpreterPath": "/opt/homebrew/bin/python3",
+  "python.defaultInterpreterPath": "${userHome}/.local/bin/python3.15",
   "python.analysis.typeCheckingMode": "standard",
   "python.analysis.typeEvaluation.strictListInference": true,
   "python.analysis.inlayHints.variableTypes": true,
@@ -144,6 +142,6 @@
     "source.unusedImports": "never"
   },
 
-  // rust
-  "rust-analyzer.check.command": "clippy"
+  // ai
+  "chat.disableAIFeatures": true
 }
