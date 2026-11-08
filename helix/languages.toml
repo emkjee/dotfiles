@@ -1,67 +1,30 @@
-## bash ------------------------------------------
-# add conf
-# ------------------------------------------------
+# {python--
+[language-server.pyright]
+command = "pyright-langserver"
+args = ["--stdio"]
+
+[language-server.pyright.config.python.analysis]
+typeCheckingMode = "off"
+diagnosticMode = "openFilesOnly"
+ignore = ["*"]
+
+[language-server.pyrefly]
+command = "pyrefly"
+args = ["lsp"]
+
+[language-server.ruff]
+command = "ruff"
+args = ["server"]
+
 [[language]]
-name = "bash"
-scope = "source.bash"
-injection-regex = "(shell|bash|zsh|sh)"
-file-types = [
-  "sh",
-  "bash",
-  "ash",
-  "dash",
-  "ksh",
-  "mksh",
-  "zsh",
-  "zshenv",
-  "zlogin",
-  "zlogout",
-  "zprofile",
-  "zshrc",
-  "eclass",
-  "ebuild",
-  "bazelrc",
-  "Renviron",
-  "zsh-theme",
-  "cshrc",
-  "conf",
-  "tcshrc",
-  "bashrc_Apple_Terminal",
-  "zshrc_Apple_Terminal",
-  { glob = "i3/config" },
-  { glob = "sway/config" },
-  { glob = "tmux.conf" },
-  { glob = ".bash_history" },
-  { glob = ".bash_login" },
-  { glob = ".bash_logout" },
-  { glob = ".bash_profile" },
-  { glob = ".bashrc" },
-  { glob = ".profile" },
-  { glob = ".zshenv" },
-  { glob = ".zlogin" },
-  { glob = ".zlogout" },
-  { glob = ".zprofile" },
-  { glob = ".zshrc" },
-  { glob = ".zimrc" },
-  { glob = "APKBUILD" },
-  { glob = ".bash_aliases" },
-  { glob = ".Renviron" },
-  { glob = ".xprofile" },
-  { glob = ".xsession" },
-  { glob = ".xsessionrc" },
-  { glob = ".yashrc" },
-  { glob = ".yash_profile" },
-  { glob = ".hushlogin" },
-]
-shebangs = ["sh", "bash", "dash", "zsh"]
-comment-token = "#"
-language-servers = [ "bash-language-server" ]
-indent = { tab-width = 2, unit = "  " }
+name = "python"
+language-servers = ["pyrefly", "ruff", "pyright"]
+auto-format = true
+formatter = { command = "ruff", args = ["format", "-"] }
+# --python}
 
-[[grammar]]
-name = "bash"
-source = { git = "https://github.com/tree-sitter/tree-sitter-bash", rev = "f8fb3274f72a30896075585b32b0c54cad65c086" }
 
+# {go--
 [language-server.gopls]
 command = "gopls"
 
@@ -73,69 +36,18 @@ functionTypeParameters = true
 parameterNames = true
 rangeVariableTypes = true
 
-[[language]]
-name = "go"
-scope = "source.go"
-injection-regex = "go"
-file-types = ["go"]
-roots = ["go.work", "go.mod"]
-auto-format = true
-comment-token = "//"
-block-comment-tokens = { start = "/*", end = "*/" }
-language-servers = [ "gopls"]
-# TODO: gopls needs utf-8 offsets?
-indent = { tab-width = 4, unit = "\t" }
-
-[language.debugger]
-name = "go"
-transport = "tcp"
-command = "dlv"
-args = ["dap"]
-port-arg = "-l 127.0.0.1:{}"
-
-[[language.debugger.templates]]
-name = "source"
-request = "launch"
-completion = [ { name = "entrypoint", completion = "filename", default = "." } ]
-args = { mode = "debug", program = "{0}" }
-
-[[language.debugger.templates]]
-name = "binary"
-request = "launch"
-completion = [ { name = "binary", completion = "filename" } ]
-args = { mode = "exec", program = "{0}" }
-
-[[language.debugger.templates]]
-name = "test"
-request = "launch"
-completion = [ { name = "tests", completion = "directory", default = "." } ]
-args = { mode = "test", program = "{0}" }
-
-[[language.debugger.templates]]
-name = "attach"
-request = "attach"
-completion = [ "pid" ]
-args = { mode = "local", processId = "{0}" }
-
-[[language.debugger.templates]]
-name = "core"
-request = "launch"
-completion = [ { name = "binary", completion = "filename" }, { name = "core", completion = "filename" } ]
-args = { mode = "core", program = "{0}", coreFilePath = "{1}" }
-
-[[grammar]]
-name = "go"
-source = { git = "https://github.com/tree-sitter/tree-sitter-go", rev = "64457ea6b73ef5422ed1687178d4545c3e91334a" }
+[language-server.golangci-lint-lsp.config]
+command = ["golangci-lint", "run", "--output.json.path=stdout", "--show-stats=false", "--issues-exit-code=1"]
 
 [[language]]
-name = "python"
-language-servers = ["pyright", "ruff"]
-# language-servers = ["ruff"]
+name = "go"
+language-servers = ["gopls", "golangci-lint-lsp"]
 auto-format = true
-[language-server.ruff]
-command = "ruff"
-args = ["server"]
+formatter = { command = "goimports" }
+# --go}
 
+
+# {rust--
 [language-server.rust-analyzer]
 command = "rust-analyzer"
 
@@ -149,58 +61,5 @@ inlayHints.typeHints.hideClosureInitialization = false
 
 [[language]]
 name = "rust"
-scope = "source.rust"
-injection-regex = "rs|rust"
-file-types = ["rs"]
-roots = ["Cargo.toml", "Cargo.lock"]
-shebangs = ["rust-script", "cargo"]
 auto-format = true
-comment-tokens = ["//", "///", "//!"]
-block-comment-tokens = [
-  { start = "/*", end = "*/" },
-  { start = "/**", end = "*/" },
-  { start = "/*!", end = "*/" },
-]
-language-servers = [ "rust-analyzer" ]
-indent = { tab-width = 4, unit = "    " }
-persistent-diagnostic-sources = ["rustc", "clippy"]
-
-[language.auto-pairs]
-'(' = ')'
-'{' = '}'
-'[' = ']'
-'"' = '"'
-'`' = '`'
-
-[language.debugger]
-name = "lldb-dap"
-transport = "stdio"
-command = "lldb-dap"
-
-[[language.debugger.templates]]
-name = "binary"
-request = "launch"
-completion = [ { name = "binary", completion = "filename" } ]
-args = { program = "{0}" }
-
-[[language.debugger.templates]]
-name = "binary (terminal)"
-request = "launch"
-completion = [ { name = "binary", completion = "filename" } ]
-args = { program = "{0}", runInTerminal = true }
-
-[[language.debugger.templates]]
-name = "attach"
-request = "attach"
-completion = [ "pid" ]
-args = { pid = "{0}" }
-
-[[language.debugger.templates]]
-name = "gdbserver attach"
-request = "attach"
-completion = [ { name = "lldb connect url", default = "connect://localhost:3333" }, { name = "file", completion = "filename" }, "pid" ]
-args = { attachCommands = [ "platform select remote-gdb-server", "platform connect {0}", "file {1}", "attach {2}" ] }
-
-[[grammar]]
-name = "rust"
-source = { git = "https://github.com/tree-sitter/tree-sitter-rust", rev = "1f63b33efee17e833e0ea29266dd3d713e27e321" }
+# --rust}
