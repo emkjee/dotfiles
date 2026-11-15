@@ -63,3 +63,16 @@ inlayHints.typeHints.hideClosureInitialization = false
 name = "rust"
 auto-format = true
 # --rust}
+
+
+# {json --
+[[language]]
+name = "json"
+formatter = { command = "prettier", args = ["--parser", "json", "--tab-width", "2"] }
+auto-format = false
+
+[[language]]
+name = "jsonc"
+formatter = { command = "prettier", args = ["--parser", "jsonc", "--tab-width", "2"] }
+auto-format = false
+# --json}
