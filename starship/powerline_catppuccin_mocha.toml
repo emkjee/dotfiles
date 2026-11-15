@@ -162,8 +162,8 @@ show_milliseconds = true
 format = " in $duration "
 style = "bg:lavender"
 disabled = true
-show_notifications = true
-min_time_to_notify = 45000
+# show_notifications = true
+# min_time_to_notify = 45000
 
 [shlvl]
 disabled = false

@@ -177,8 +177,8 @@ format = '[  $time ]($style)'
 [cmd_duration]
 disabled = false
 show_milliseconds = false
-show_notifications = true
-min_time_to_notify = 45000
+# show_notifications = true
+# min_time_to_notify = 45000
 min_time = 5000
 style = "italic #FFA066"
 format = "[ took $duration ]($style)"
