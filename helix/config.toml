@@ -1,4 +1,4 @@
-theme               = "hx_gruvbox"
+theme               = "everforest_dark"
 
 
 ## insert-mode -----------------------------------
@@ -103,6 +103,7 @@ esc                 = ["collapse_selection"]
 "a"                 = "@:sh git add <C-r>%<ret>"
 
 [editor]
+rainbow-brackets    = true
 scrolloff           = 2
 insert-final-newline = true
 cursorline          = true
