@@ -1,0 +1,175 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+[╭─](fg:#9DA9A0)\
+[](fg:#9DA9A0)\
+$os\
+[](bg:#9DA9A0 fg:#A7C080)\
+$directory\
+[](bg:#A7C080 fg:#DBBC7F)\
+$git_branch\
+$git_status\
+[](bg:#DBBC7F fg:#7FBBB3)\
+$c$cpp$rust$golang$nodejs$php$java$kotlin$haskell$python$lua\
+[](bg:#7FBBB3 fg:#BEC5B2)\
+$docker_context\
+$conda\
+$pixi\
+[](bg:#BEC5B2 fg:#374145)\
+$time\
+$cmd_duration
+[╰─](fg:#9DA9A0)\
+$shlvl\
+$character"""
+
+[character]
+disabled = false
+success_symbol = '[❯](fg:#A7C080)'
+error_symbol = '[❯](fg:#E67E80)'
+vimcmd_symbol = '[❮](fg:#DBBC7F)'
+vimcmd_replace_one_symbol = '[❮](fg:#D699B6)'
+vimcmd_replace_symbol = '[❮](fg:#D699B6)'
+vimcmd_visual_symbol = '[❮](fg:#7FBBB3)'
+
+[os.symbols]
+Windows = "󰍲"
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = "󰀵"
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+Arch = "󰣇"
+Artix = "󰣇"
+EndeavourOS = ""
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
+Pop = ""
+
+[os]
+disabled = false
+style = "bg:#9DA9A0 fg:#272E33"
+format = '[ $symbol ]($style)'
+
+[directory.substitutions]
+"Documents" = "󰈙"
+"Downloads" = ""
+"Music" = "󰝚"
+"Pictures" = ""
+"Developer" = "󰲋"
+"dotfiles" = ""
+
+[directory]
+read_only = " "
+truncation_length = 3
+truncation_symbol = "…/"
+truncate_to_repo = true
+style = "bg:#A7C080 fg:#272E33"
+format = "[  $path ]($style)"
+
+[git_branch]
+symbol = ""
+style = "fg:italic #272E33 bg:#DBBC7F"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = "fg:italic #272E33 bg:#DBBC7F"
+format = '([\[$all_status$ahead_behind\] ]($style))'
+
+[nodejs]
+symbol = ""
+style = "fg:#272E33 bg:#7FBBB3"
+format = '[ $symbol( $version) ]($style)'
+
+[c]
+symbol = " "
+style = "fg:#272E33 bg:#7FBBB3"
+format = '[ $symbol( $version) ]($style)'
+
+[cpp]
+symbol = " "
+style = "fg:#272E33 bg:#7FBBB3"
+format = '[ $symbol( $version) ]($style)'
+
+[lua]
+symbol = "" 
+style = "fg:#272E33 bg:#7FBBB3"
+format = '[ $symbol ($version) ]($style)'
+version_format = "${raw}"
+
+[golang]
+symbol = ""
+style = "fg:#272E33 bg:#7FBBB3"
+format = '[ $symbol( $version) ]($style)'
+
+[php]
+symbol = ""
+style = "fg:#272E33 bg:#7FBBB3"
+format = '[ $symbol( $version) ]($style)'
+
+[java]
+symbol = ""
+style = "fg:#272E33 bg:#7FBBB3"
+format = '[ $symbol( $version) ]($style)'
+
+[kotlin]
+symbol = ""
+style = "fg:#272E33 bg:#7FBBB3"
+format = '[ $symbol( $version) ]($style)'
+
+[haskell]
+symbol = ""
+style = "fg:#272E33 bg:#7FBBB3"
+format = '[ $symbol( $version) ]($style)'
+
+[python]
+symbol = ""
+style = "fg:#272E33 bg:#7FBBB3"
+format = '[ $symbol ($version) (\($virtualenv\)) ]($style)'
+version_format = "v${raw}"
+
+[rust]
+symbol = ""
+style = "fg:#272E33 bg:#7FBBB3"
+format = '[ $symbol ($version) ]($style)'
+
+[docker_context]
+symbol = ""
+style = "fg:#272E33 bg:#BEC5B2"
+format = '[ $symbol( $context) ]($style)'
+
+[conda]
+ignore_base = false
+style = "fg:#272E33 bg:#BEC5B2"
+format = '[ $symbol( $environment) ]($style)'
+
+[pixi]
+style = "fg:#272E33 bg:#BEC5B2"
+format = '[ $symbol( $version)( $environment) ]($style)'
+
+[time]
+disabled = false
+time_format = "%R"
+style = "fg:#D3C6AA bg:#374145"
+format = '[  $time ]($style)'
+
+[cmd_duration]
+disabled = false
+show_milliseconds = false
+min_time = 5000
+style = "italic fg:#E69875"
+format = "[ took $duration ]($style)"
+
+[shlvl]
+disabled = false
+symbol = "󰨊"
+style = "italic fg:#E67E80"
+format = '[ $symbol-($shlvl) ]($style)'
